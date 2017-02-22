@@ -1,0 +1,3416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SheetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IsNew>false</IsNew>
+  <SheetDefNum>16</SheetDefNum>
+  <Description>RxMulti</Description>
+  <SheetType>RxMulti</SheetType>
+  <FontSize>8</FontSize>
+  <FontName>Microsoft Sans Serif</FontName>
+  <Width>850</Width>
+  <Height>1100</Height>
+  <IsLandscape>true</IsLandscape>
+  <PageCount>1</PageCount>
+  <IsMultiPage>false</IsMultiPage>
+  <SheetFieldDefs>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1398</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>DEA#:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>829</XPos>
+      <YPos>66</YPos>
+      <Width>40</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1397</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.nameFL2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>37</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1396</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Refills2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>684</XPos>
+      <YPos>282</YPos>
+      <Width>110</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1395</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>RxDate2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>829</XPos>
+      <YPos>52</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1391</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>549</XPos>
+      <YPos>0</YPos>
+      <Width>0</Width>
+      <Height>425</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1392</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>549</XPos>
+      <YPos>424</YPos>
+      <Width>550</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1393</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>549</XPos>
+      <YPos>0</YPos>
+      <Width>550</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1394</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Sig2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>669</XPos>
+      <YPos>247</YPos>
+      <Width>325</Width>
+      <Height>28</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1390</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>1098</XPos>
+      <YPos>0</YPos>
+      <Width>0</Width>
+      <Height>425</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1387</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Rx</FieldValue>
+      <FontSize>24</FontSize>
+      <FontName>Times New Roman</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>584</XPos>
+      <YPos>190</YPos>
+      <Width>55</Width>
+      <Height>33</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1388</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>DOB:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>119</YPos>
+      <Width>40</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1389</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>574</XPos>
+      <YPos>100</YPos>
+      <Width>500</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1386</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Disp:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>226</YPos>
+      <Width>35</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1383</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>368</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1384</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>611</XPos>
+      <YPos>368</YPos>
+      <Width>-12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1385</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Generic Substitution Permitted</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>616</XPos>
+      <YPos>368</YPos>
+      <Width>200</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1382</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Rectangle</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>368</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1381</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Sig:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>247</YPos>
+      <Width>30</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1378</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Dispense as Written</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>616</XPos>
+      <YPos>343</YPos>
+      <Width>200</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1379</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Rectangle</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>343</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1380</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Refills:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>282</YPos>
+      <Width>45</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1377</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>844</XPos>
+      <YPos>360</YPos>
+      <Width>230</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1375</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Signature of Prescriber</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>889</XPos>
+      <YPos>364</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1376</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.phone2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>829</XPos>
+      <YPos>38</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1374</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.cityStateZip2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>161</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1373</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Disp2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>674</XPos>
+      <YPos>226</YPos>
+      <Width>300</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1372</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.dEANum2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>869</XPos>
+      <YPos>66</YPos>
+      <Width>130</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1371</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Drug2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>205</YPos>
+      <Width>300</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1369</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.address2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>147</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>DownLocal</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1370</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.cityStateZip2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>65</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1366</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.nameFL2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>105</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1368</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.address2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>51</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>DownLocal</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1367</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.Birthdate2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>679</XPos>
+      <YPos>119</YPos>
+      <Width>110</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1365</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.HmPhone2</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>133</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1364</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Disp4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>674</XPos>
+      <YPos>650</YPos>
+      <Width>300</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1363</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Drug4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>629</YPos>
+      <Width>300</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1362</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.address4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>571</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>DownLocal</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1360</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.nameFL4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>461</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1361</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.Birthdate4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>679</XPos>
+      <YPos>543</YPos>
+      <Width>110</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1358</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.dEANum4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>869</XPos>
+      <YPos>490</YPos>
+      <Width>130</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1359</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.cityStateZip4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>585</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1357</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.nameFL4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>529</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1355</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Sig4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>669</XPos>
+      <YPos>671</YPos>
+      <Width>325</Width>
+      <Height>28</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1356</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.address4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>475</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>DownLocal</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1354</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>RxDate4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>829</XPos>
+      <YPos>476</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1351</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.phone4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>829</XPos>
+      <YPos>462</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1353</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.cityStateZip4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>489</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1352</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Refills4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>684</XPos>
+      <YPos>706</YPos>
+      <Width>110</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1350</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.HmPhone4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>557</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1349</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>549</XPos>
+      <YPos>848</YPos>
+      <Width>550</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1347</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Disp:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>650</YPos>
+      <Width>35</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1348</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Dispense as Written</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>616</XPos>
+      <YPos>767</YPos>
+      <Width>200</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1344</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>DOB:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>543</YPos>
+      <Width>40</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1345</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Refills:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>706</YPos>
+      <Width>45</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1346</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>DEA#:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>829</XPos>
+      <YPos>490</YPos>
+      <Width>40</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1343</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>844</XPos>
+      <YPos>784</YPos>
+      <Width>230</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1342</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>1098</XPos>
+      <YPos>424</YPos>
+      <Width>0</Width>
+      <Height>425</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1341</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>549</XPos>
+      <YPos>424</YPos>
+      <Width>0</Width>
+      <Height>425</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1340</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Rx</FieldValue>
+      <FontSize>24</FontSize>
+      <FontName>Times New Roman</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>584</XPos>
+      <YPos>614</YPos>
+      <Width>55</Width>
+      <Height>33</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1339</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Signature of Prescriber</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>889</XPos>
+      <YPos>788</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1338</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>549</XPos>
+      <YPos>424</YPos>
+      <Width>550</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1337</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>574</XPos>
+      <YPos>524</YPos>
+      <Width>500</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1335</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Generic Substitution Permitted</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>616</XPos>
+      <YPos>792</YPos>
+      <Width>200</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1336</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Rectangle</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>767</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1333</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Rectangle</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>792</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1334</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Sig:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>639</XPos>
+      <YPos>671</YPos>
+      <Width>30</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1332</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>611</XPos>
+      <YPos>792</YPos>
+      <Width>-12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1330</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Dispense as Written</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>67</XPos>
+      <YPos>767</YPos>
+      <Width>200</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1331</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>599</XPos>
+      <YPos>792</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1329</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Rectangle</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>767</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1328</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>DOB:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>543</YPos>
+      <Width>40</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1326</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Refills:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>706</YPos>
+      <Width>45</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1327</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Refills3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>135</XPos>
+      <YPos>706</YPos>
+      <Width>110</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1324</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Disp:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>650</YPos>
+      <Width>35</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1325</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.nameFL3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>529</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1323</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Rx</FieldValue>
+      <FontSize>24</FontSize>
+      <FontName>Times New Roman</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>35</XPos>
+      <YPos>614</YPos>
+      <Width>55</Width>
+      <Height>33</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1322</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.phone3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>280</XPos>
+      <YPos>462</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1321</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.dEANum3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>320</XPos>
+      <YPos>490</YPos>
+      <Width>130</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1320</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Sig:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>671</YPos>
+      <Width>30</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1319</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.address3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>475</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>DownLocal</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1318</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.nameFL3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>461</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1317</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>DEA#:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>280</XPos>
+      <YPos>490</YPos>
+      <Width>40</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1315</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>25</XPos>
+      <YPos>524</YPos>
+      <Width>500</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1316</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>RxDate3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>280</XPos>
+      <YPos>476</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1314</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Disp3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>125</XPos>
+      <YPos>650</YPos>
+      <Width>300</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1313</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Drug3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>629</YPos>
+      <Width>300</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1312</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Generic Substitution Permitted</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>67</XPos>
+      <YPos>792</YPos>
+      <Width>200</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1311</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.address4</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>571</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>DownLocal</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1310</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>62</XPos>
+      <YPos>792</YPos>
+      <Width>-12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1308</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>0</XPos>
+      <YPos>424</YPos>
+      <Width>550</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1309</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Rectangle</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>792</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1307</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.Birthdate3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>130</XPos>
+      <YPos>543</YPos>
+      <Width>110</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1306</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>0</XPos>
+      <YPos>424</YPos>
+      <Width>0</Width>
+      <Height>425</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1305</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>792</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1303</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.cityStateZip3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>585</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1304</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>0</XPos>
+      <YPos>848</YPos>
+      <Width>550</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1302</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>549</XPos>
+      <YPos>424</YPos>
+      <Width>0</Width>
+      <Height>425</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1301</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Signature of Prescriber</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>340</XPos>
+      <YPos>788</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1300</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.HmPhone3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>557</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1299</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Sig3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>120</XPos>
+      <YPos>671</YPos>
+      <Width>325</Width>
+      <Height>28</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1298</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>295</XPos>
+      <YPos>784</YPos>
+      <Width>230</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1297</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.cityStateZip3</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>489</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1296</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Signature of Prescriber</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>340</XPos>
+      <YPos>364</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1295</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.phone</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>280</XPos>
+      <YPos>38</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1294</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.Birthdate</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>130</XPos>
+      <YPos>119</YPos>
+      <Width>110</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1293</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>DOB:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>119</YPos>
+      <Width>40</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1291</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.dEANum</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>320</XPos>
+      <YPos>66</YPos>
+      <Width>130</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1292</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.nameFL</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>105</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1290</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>DEA#:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>280</XPos>
+      <YPos>66</YPos>
+      <Width>40</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1289</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>RxDate</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>280</XPos>
+      <YPos>52</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1288</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>25</XPos>
+      <YPos>100</YPos>
+      <Width>500</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1287</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>295</XPos>
+      <YPos>360</YPos>
+      <Width>230</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1286</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.cityStateZip</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>65</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1285</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.address</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>51</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>DownLocal</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1283</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>0</XPos>
+      <YPos>424</YPos>
+      <Width>550</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1284</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>prov.nameFL</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>37</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1282</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>549</XPos>
+      <YPos>0</YPos>
+      <Width>0</Width>
+      <Height>425</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1281</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>0</XPos>
+      <YPos>0</YPos>
+      <Width>0</Width>
+      <Height>425</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1280</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.HmPhone</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>133</YPos>
+      <Width>150</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1279</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.address</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>147</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>DownLocal</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1278</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>pat.cityStateZip</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>161</YPos>
+      <Width>170</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1277</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Rx</FieldValue>
+      <FontSize>24</FontSize>
+      <FontName>Times New Roman</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>35</XPos>
+      <YPos>190</YPos>
+      <Width>55</Width>
+      <Height>33</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1274</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Disp</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>125</XPos>
+      <YPos>226</YPos>
+      <Width>300</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1275</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Disp:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>226</YPos>
+      <Width>35</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1276</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Drug</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>true</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>205</YPos>
+      <Width>300</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1273</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Sig:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>247</YPos>
+      <Width>30</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1272</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Sig</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>120</XPos>
+      <YPos>247</YPos>
+      <Width>325</Width>
+      <Height>28</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1271</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Refills:</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>90</XPos>
+      <YPos>282</YPos>
+      <Width>45</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1269</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Rectangle</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>343</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1270</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>OutputText</FieldType>
+      <FieldName>Refills</FieldName>
+      <FieldValue />
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>135</XPos>
+      <YPos>282</YPos>
+      <Width>110</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1268</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Dispense as Written</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>67</XPos>
+      <YPos>343</YPos>
+      <Width>200</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1267</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Rectangle</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>368</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1266</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>50</XPos>
+      <YPos>368</YPos>
+      <Width>12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1263</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>0</XPos>
+      <YPos>0</YPos>
+      <Width>550</Width>
+      <Height>0</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1264</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>StaticText</FieldType>
+      <FieldName />
+      <FieldValue>Generic Substitution Permitted</FieldValue>
+      <FontSize>8</FontSize>
+      <FontName>Microsoft Sans Serif</FontName>
+      <FontIsBold>false</FontIsBold>
+      <XPos>67</XPos>
+      <YPos>368</YPos>
+      <Width>200</Width>
+      <Height>14</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+    <SheetFieldDef>
+      <IsNew>false</IsNew>
+      <SheetFieldDefNum>1265</SheetFieldDefNum>
+      <SheetDefNum>16</SheetDefNum>
+      <FieldType>Line</FieldType>
+      <FieldName />
+      <FieldValue />
+      <FontSize>0</FontSize>
+      <FontName />
+      <FontIsBold>false</FontIsBold>
+      <XPos>62</XPos>
+      <YPos>368</YPos>
+      <Width>-12</Width>
+      <Height>12</Height>
+      <GrowthBehavior>None</GrowthBehavior>
+      <RadioButtonValue />
+      <RadioButtonGroup />
+      <IsRequired>false</IsRequired>
+      <ImageData />
+      <TabOrder>0</TabOrder>
+      <ReportableName />
+      <TextAlign>Left</TextAlign>
+      <IsPaymentOption>false</IsPaymentOption>
+      <ColorOverride>-16777216</ColorOverride>
+    </SheetFieldDef>
+  </SheetFieldDefs>
+</SheetDef>

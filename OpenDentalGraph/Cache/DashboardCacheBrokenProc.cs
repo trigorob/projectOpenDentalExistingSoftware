@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using OpenDentBusiness;
+using System.Data;
+using System.Linq;
+using System.Text;
+
+namespace OpenDentalGraph.Cache {
+	public class DashboardCacheBrokenProcedure:DashboardCacheWithQuery<BrokenProc> {
+		protected override string GetCommand(DashboardFilter filter) {
+			string where="WHERE ProcStatus="+(int)ProcStat.C+" ";
+			if(filter.UseDateFilter) {
+				where="AND DATE(ProcDate) BETWEEN "+POut.Date(filter.DateFrom)+" AND "+POut.Date(filter.DateTo)+" ";
+			}
+			return
+				"SELECT ProcDate,ProvNum,ClinicNum,COUNT(ProcNum) ProcCount, SUM(ProcFee) ProcFee "
+				+"FROM procedurelog "
+				+"INNER JOIN procedurecode ON procedurecode.CodeNum=procedurelog.CodeNum "
+				+"AND procedurecode.ProcCode='D9986' "
+				+where
+				+"GROUP BY ProcDate,ProvNum,ClinicNum ";
+		}
+
+		protected override BrokenProc GetInstanceFromDataRow(DataRow x) {
+			return new BrokenProc() {
+				ProvNum=PIn.Long(x["ProvNum"].ToString()),
+				ClinicNum=PIn.Long(x["ClinicNum"].ToString()),
+				DateStamp=PIn.DateT(x["ProcDate"].ToString()),
+				Count=PIn.Long(x["ProcCount"].ToString()),
+				Val=PIn.Double(x["ProcFee"].ToString())
+			};
+		}
+	}
+
+	public class BrokenProc:GraphQuantityOverTime.GraphDataPointClinic {
+	}	
+}
