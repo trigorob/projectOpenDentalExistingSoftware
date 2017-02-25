@@ -447,6 +447,9 @@
     <Compile Include="Forms Reports\FormRpBrokenAppointments.Designer.cs">
       <DependentUpon>FormRpBrokenAppointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormKPIMore.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FormQBAccountSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3960,6 +3963,12 @@
       <DependentUpon>UserControlPhoneSmall.cs</DependentUpon>
     </Compile>
     <Compile Include="InternalTools\Phones\PhoneUI.cs" />
+    <Compile Include="KPI Reports\FormKPIActiveRecall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI Reports\FormKPIActiveRecall.Designer.cs">
+      <DependentUpon>FormKPIActiveRecall.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main Modules\ContrAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
