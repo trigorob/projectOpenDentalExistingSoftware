@@ -16,8 +16,8 @@ namespace OpenDental {
 		}
 
 		private void FormKPIActiveRecall_Load(object sender,EventArgs e) {
-			dateStart.SelectionStart=DateTime.Today;
-			dateEnd.SelectionStart=DateTime.Today.AddYears(1);
+			dateStart.SelectionStart=DateTime.Today.AddYears(-1);
+			dateEnd.SelectionStart=DateTime.Today;
 		}
 
 		private void butOK_Click(object sender,EventArgs e) {
@@ -30,11 +30,11 @@ namespace OpenDental {
 			QueryObject query;
             query = report.AddQuery(tablePats, "", "", SplitByKind.None, 0);
             query.AddColumn("Name",150,FieldValueType.String);
-			query.AddColumn("Birthdate",80,FieldValueType.String);
-			query.AddColumn("Sex",150,FieldValueType.String);
-			query.AddColumn("Postal Code",90,FieldValueType.String);
+			query.AddColumn("Gender", 60, FieldValueType.String);
+            query.AddColumn("Age", 40, FieldValueType.String);
+            query.AddColumn("Postal Code",90,FieldValueType.String);
 			query.AddColumn("Date of Service",100,FieldValueType.String);
-			query.AddColumn("Primary Provider",40,FieldValueType.String);
+			query.AddColumn("Primary Provider",80,FieldValueType.String);
 			query.AddGroupSummaryField("Patient Count:","Name", "Provider", SummaryOperation.Count);
 			report.AddPageNum();
 			if(!report.SubmitQueries()) {

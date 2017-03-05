@@ -13,17 +13,21 @@ namespace OpenDentBusiness {
 			}
 			DataTable table=new DataTable();
 			table.Columns.Add("Name");
-			table.Columns.Add("Sex");
+			table.Columns.Add("Gender");
 			table.Columns.Add("Age");
 			table.Columns.Add("Postal Code");
 			table.Columns.Add("Date of Service");
             table.Columns.Add("Primary Provider");
             DataRow row;
             string command = @"
-				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, r.DateDue, p.Birthdate  
+				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, r.ProcDate, p.Birthdate  
 				FROM patient p 
-				JOIN recall r ON r.PatNum = p.PatNum
-				WHERE r.DateDue BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @"";
+				JOIN procedurelog r ON r.PatNum = p.PatNum 
+				WHERE r.ProcDate = (SELECT MAX(r2.ProcDate) 
+                FROM procedurelog r2
+                WHERE r.PatNum = r2.PatNum AND
+                r2.CodeNum = 01202 AND 
+                r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
 
 			DataTable raw=ReportsComplex.GetTable(command);
 			Patient pat;
@@ -36,14 +40,36 @@ namespace OpenDentBusiness {
 				pat.Preferred=raw.Rows[i]["Preferred"].ToString();
 				row["Name"]=pat.GetNameLF();
 				row["Primary Provider"]=Providers.GetAbbr(PIn.Long(raw.Rows[i]["PriProv"].ToString()));
-                row["Sex"] = raw.Rows[i]["Gender"].ToString();
+                Console.Write(raw.Rows[i]["Gender"].ToString());
+                row["Gender"] = genderFormat(raw.Rows[i]["Gender"].ToString());
 				row["Postal Code"]=raw.Rows[i]["Zip"].ToString();
-                row["Date of Service"] = raw.Rows[i]["DateDue"].ToString();
-                row["Age"] = raw.Rows[i]["Birthdate"].ToString(); //Change to age properly using a fn TODOKPI
+                row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
+                row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
 				table.Rows.Add(row);
 			}
 			return table;
 		}
+
+        private static string genderFormat(string gNum)
+        {
+            if (gNum == "0") {
+                return "M";
+            }
+            else if (gNum == "1") {
+                return "F";
+            }
+            else {
+                return "Unknown";
+            }
+        }
+
+        private static int birthdate_to_age(string bd) {
+            DateTime birthdate = Convert.ToDateTime(bd);
+            var today = DateTime.UtcNow;
+            var age = today.Year - birthdate.Year;
+            if (birthdate > today.AddYears(-age)) age--;
+            return age;
+        }
 
 	}
 }
