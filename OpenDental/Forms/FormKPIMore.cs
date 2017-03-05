@@ -117,7 +117,8 @@ namespace OpenDental {
 
 		private void FormKPIMore_Load(object sender,EventArgs e) {
 			listKPI.Items.AddRange(new string[] { //Delete this comment on deliver: STEP 1 Add report to list
-				Lan.g(this,"Patients on Active Recall")
+				Lan.g(this,"Patients on Active Recall"),
+                Lan.g(this,"Patients on Perio Recall")
 			});
 		}
 		private void listKPI_MouseDown(object sender,MouseEventArgs e) {
@@ -129,6 +130,11 @@ namespace OpenDental {
                 case 0://Patients on Active Recall
                     FormKPIActiveRecall FormAR = new FormKPIActiveRecall(); //Delete this comment on deliver: STEP 3 Create form cs and designer file (add to project as well) for criteria selection
 					FormAR.ShowDialog();
+					//SecurityLogs.MakeLogEntry(Permissions.Reports,0,"Active Patients"); TODOKPI ID100
+					break;
+                case 1://Patients on Perio Recall
+                    FormKPIPerioRecall FormPR = new FormKPIPerioRecall(); //Delete this comment on deliver: STEP 3 Create form cs and designer file (add to project as well) for criteria selection
+					FormPR.ShowDialog();
 					//SecurityLogs.MakeLogEntry(Permissions.Reports,0,"Active Patients"); TODOKPI ID100
 					break;
 			}

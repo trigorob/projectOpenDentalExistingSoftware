@@ -3969,6 +3969,12 @@
     <Compile Include="KPI Reports\FormKPIActiveRecall.Designer.cs">
       <DependentUpon>FormKPIActiveRecall.cs</DependentUpon>
     </Compile>
+    <Compile Include="KPI Reports\FormKPIPerioRecall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI Reports\FormKPIPerioRecall.Designer.cs">
+      <DependentUpon>FormKPIPerioRecall.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main Modules\ContrAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
