@@ -117,21 +117,43 @@ namespace OpenDental {
 
 		private void FormKPIMore_Load(object sender,EventArgs e) {
 			listKPI.Items.AddRange(new string[] { //Delete this comment on deliver: STEP 1 Add report to list
-				Lan.g(this,"Patients on Active Recall")
-			});
+				Lan.g(this,"Patients on Active Recall"),
+                Lan.g(this,"List of New Patients"),
+                Lan.g(this,"New Patients by Referral Source"),
+                Lan.g(this,"New Patients to Recall Patients")
+            });
 		}
 		private void listKPI_MouseDown(object sender,MouseEventArgs e) {
 			int selected=listKPI.IndexFromPoint(e.Location);
 			if(selected==-1) {
 				return;
 			}
-			switch(selected) { //Delete this comment on deliver: STEP 2 Add case to switch statement
+
+            switch (selected) { //Delete this comment on deliver: STEP 2 Add case to switch statement
                 case 0://Patients on Active Recall
                     FormKPIActiveRecall FormAR = new FormKPIActiveRecall(); //Delete this comment on deliver: STEP 3 Create form cs and designer file (add to project as well) for criteria selection
 					FormAR.ShowDialog();
 					//SecurityLogs.MakeLogEntry(Permissions.Reports,0,"Active Patients"); TODOKPI ID100
 					break;
-			}
+
+                case 8://New patients
+                    FormKPINewPatients FormAR8 = new FormKPINewPatients(); 
+                    FormAR8.ShowDialog();
+                    //SecurityLogs.MakeLogEntry(Permissions.Reports,8,"New Patients"); TODOKPI ID800
+                    break;
+                case 9://New patients by referral source
+                    //FormKPIByReferralSource FormAR = new FormKPIByReferralSource();
+                    //FormAR.ShowDialog();
+                    //SecurityLogs.MakeLogEntry(Permissions.Reports,9,"New Patients by Referrl"); TODOKPI ID900
+                    break;
+                case 10://New patients to recall patients
+                    FormKPINewToRecall FormAR10 = new FormKPINewToRecall();
+                    FormAR10.ShowDialog();
+                    //SecurityLogs.MakeLogEntry(Permissions.Reports,10,"New Patients to Recall Patients"); TODOKPI ID1000
+                    break;
+                default:
+                    return;
+            }
 		}
 
 		private void butClose_Click(object sender,System.EventArgs e) {

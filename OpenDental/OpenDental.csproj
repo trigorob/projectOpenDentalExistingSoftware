@@ -3963,11 +3963,29 @@
       <DependentUpon>UserControlPhoneSmall.cs</DependentUpon>
     </Compile>
     <Compile Include="InternalTools\Phones\PhoneUI.cs" />
+    <Compile Include="KPI Reports\FormKPINewPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI Reports\FormKPINewPatients.Designer.cs">
+      <DependentUpon>FormKPINewPatients.cs</DependentUpon>
+    </Compile>
     <Compile Include="KPI Reports\FormKPIActiveRecall.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KPI Reports\FormKPIActiveRecall.Designer.cs">
       <DependentUpon>FormKPIActiveRecall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KPI Reports\FormKPIByReferralSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI Reports\FormKPIByReferralSource.Designer.cs">
+      <DependentUpon>FormKPIByReferralSource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KPI Reports\FormKPINewToRecall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI Reports\FormKPINewToRecall.Designer.cs">
+      <DependentUpon>FormKPINewToRecall.cs</DependentUpon>
     </Compile>
     <Compile Include="Main Modules\ContrAccount.cs">
       <SubType>UserControl</SubType>
