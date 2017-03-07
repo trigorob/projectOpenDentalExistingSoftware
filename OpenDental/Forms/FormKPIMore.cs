@@ -117,8 +117,10 @@ namespace OpenDental {
 
 		private void FormKPIMore_Load(object sender,EventArgs e) {
 			listKPI.Items.AddRange(new string[] { //Delete this comment on deliver: STEP 1 Add report to list
-				Lan.g(this,"Patients on Active Recall")
-			});
+				Lan.g(this,"Patients on Active Recall"),
+                Lan.g(this,"Patients who missed their appointment"),
+                Lan.g(this,"Patients who cancelled short notice")
+            });
 		}
 		private void listKPI_MouseDown(object sender,MouseEventArgs e) {
 			int selected=listKPI.IndexFromPoint(e.Location);
@@ -131,8 +133,16 @@ namespace OpenDental {
 					FormAR.ShowDialog();
 					//SecurityLogs.MakeLogEntry(Permissions.Reports,0,"Active Patients"); TODOKPI ID100
 					break;
-			}
-		}
+                case 1: //Patients who did not show for their appt
+                    FormKPINoShowAppt FormNSA = new FormKPINoShowAppt(); 
+                    FormNSA.ShowDialog();
+                    break;
+                case 2: //Patients who cancelled short notice
+                    FormKPICancel FormC = new FormKPICancel();
+                    FormC.ShowDialog();
+                    break;
+            }
+        }
 
 		private void butClose_Click(object sender,System.EventArgs e) {
 			Close();
