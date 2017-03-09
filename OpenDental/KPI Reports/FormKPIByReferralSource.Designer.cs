@@ -1,6 +1,6 @@
 ﻿namespace OpenDental
 {
-    partial class FormKPINewToRecall
+    partial class FormKPIByReferralSource
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRpActivePatients));
             this.butOK = new OpenDental.UI.Button();
             this.butCancel = new OpenDental.UI.Button();
-            this.butDateSelec = new OpenDental.UI.Button();
-            //this.dateEnd = new System.Windows.Forms.MonthCalendar();
-            //this.dateStart = new System.Windows.Forms.MonthCalendar();
+            this.dateEnd = new System.Windows.Forms.MonthCalendar();
+            this.dateStart = new System.Windows.Forms.MonthCalendar();
             this.labelTO = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            //this.SuspendLayout();
+            this.SuspendLayout();
             // 
             // butOK
             // 
@@ -68,60 +67,6 @@
             this.butCancel.Text = "&Cancel";
             this.butCancel.Click += new System.EventHandler(this.butCancel_Click);
             // 
-            // butDateSelec
-            // 
-            this.butDateSelec.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.butDateSelec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.butDateSelec.Autosize = true;
-            this.butDateSelec.BtnShape = OpenDental.UI.enumType.BtnShape.Rectangle;
-            this.butDateSelec.BtnStyle = OpenDental.UI.enumType.XPStyle.Silver;
-            this.butDateSelec.CornerRadius = 4F;
-            this.butDateSelec.Location = new System.Drawing.Point(349, 200);
-            this.butDateSelec.Name = "butDateSelec";
-            this.butDateSelec.Size = new System.Drawing.Size(75, 24);
-            this.butDateSelec.TabIndex = 2;
-            this.butDateSelec.Text = "&Select Alternate Date Range";
-            this.butDateSelec.Click += new System.EventHandler(this.butDateSelec_Click);
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(12, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(492, 16);
-            this.label3.TabIndex = 72;
-            this.label3.Text = "Get a list of all new to recall patients within one (1) year";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // FormKPINewtoRecall
-            // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(517, 490);
-           
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.butDateSelec);
-            this.Controls.Add(this.butOK);
-            this.Controls.Add(this.butCancel);
-            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon"))); TODOKPI
-            this.MinimumSize = new System.Drawing.Size(533, 528);
-            this.Name = "FormKPINewToRecall";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "New to Recall Patients";
-            this.Load += new System.EventHandler(this.FormKPINewToRecall_Load);
-            this.ResumeLayout(false);
-        }
-
-        private void ManualDateSelection()
-        {
-            this.dateEnd = new System.Windows.Forms.MonthCalendar();
-            this.dateStart = new System.Windows.Forms.MonthCalendar();
-
-            this.Controls.Remove(this.butDateSelec);
-
-            this.Controls.Add(this.labelTO);
-            this.Controls.Add(this.dateEnd);
-            this.Controls.Add(this.dateStart);
-
-            // 
             // dateEnd
             // 
             this.dateEnd.Location = new System.Drawing.Point(277, 32);
@@ -142,19 +87,40 @@
             this.labelTO.TabIndex = 58;
             this.labelTO.Text = "TO";
             this.labelTO.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(12, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(492, 16);
+            this.label3.TabIndex = 72;
+            this.label3.Text = "List of all new patients by referral source within the specified date range.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // FormKPIPerioRecall
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(517, 490);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dateEnd);
+            this.Controls.Add(this.dateStart);
+            this.Controls.Add(this.labelTO);
+            this.Controls.Add(this.butOK);
+            this.Controls.Add(this.butCancel);
+            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon"))); TODOKPI
+            this.MinimumSize = new System.Drawing.Size(533, 528);
+            this.Name = "FormKPINewPatients";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "New Patients by Referral Source";
+            this.Load += new System.EventHandler(this.FormKPIByReferralSource_Load);
+            this.ResumeLayout(false);
 
-            this.label3.Text = "Get a list of all new to recall patients within selected date range";
-           
-       
         }
-
-
 
         #endregion
 
         private OpenDental.UI.Button butOK;
         private OpenDental.UI.Button butCancel;
-        private OpenDental.UI.Button butDateSelec;
         private System.Windows.Forms.MonthCalendar dateEnd;
         private System.Windows.Forms.MonthCalendar dateStart;
         private System.Windows.Forms.Label labelTO;

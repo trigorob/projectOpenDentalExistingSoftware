@@ -118,9 +118,16 @@ namespace OpenDental {
 		private void FormKPIMore_Load(object sender,EventArgs e) {
 			listKPI.Items.AddRange(new string[] { //Delete this comment on deliver: STEP 1 Add report to list
 				Lan.g(this,"Patients on Active Recall"),
+                Lan.g(this,"Patients on Perio Recall"),
+                Lan.g(this,"Backlog of Recall Patients"),
+                Lan.g(this,"Patients No-Shows"),
+                Lan.g(this,"Late Cancelling Patients"),
+                Lan.g(this,"Total Non-Productive Practice Time"),
+                Lan.g(this,"Downtime for Each Provider"),
                 Lan.g(this,"List of New Patients"),
                 Lan.g(this,"New Patients by Referral Source"),
-                Lan.g(this,"New Patients to Recall Patients")
+                Lan.g(this,"New Patients to Recall Patients"),
+                Lan.g(this,"Case Presentation")
             });
 		}
 		private void listKPI_MouseDown(object sender,MouseEventArgs e) {
@@ -136,20 +143,20 @@ namespace OpenDental {
 					//SecurityLogs.MakeLogEntry(Permissions.Reports,0,"Active Patients"); TODOKPI ID100
 					break;
 
-                case 8://New patients
-                    FormKPINewPatients FormAR8 = new FormKPINewPatients(); 
+                case 7://New patients
+                    FormKPINewPatients FormAR7 = new FormKPINewPatients(); 
+                    FormAR7.ShowDialog();
+                    //SecurityLogs.MakeLogEntry(Permissions.Reports,7,"New Patients"); TODOKPI ID800
+                    break;
+                case 8://New patients by referral source
+                    FormKPIByReferralSource FormAR8 = new FormKPIByReferralSource();
                     FormAR8.ShowDialog();
-                    //SecurityLogs.MakeLogEntry(Permissions.Reports,8,"New Patients"); TODOKPI ID800
+                    //SecurityLogs.MakeLogEntry(Permissions.Reports,8,"New Patients by Referrl"); TODOKPI ID900
                     break;
-                case 9://New patients by referral source
-                    //FormKPIByReferralSource FormAR = new FormKPIByReferralSource();
-                    //FormAR.ShowDialog();
-                    //SecurityLogs.MakeLogEntry(Permissions.Reports,9,"New Patients by Referrl"); TODOKPI ID900
-                    break;
-                case 10://New patients to recall patients
-                    FormKPINewToRecall FormAR10 = new FormKPINewToRecall();
-                    FormAR10.ShowDialog();
-                    //SecurityLogs.MakeLogEntry(Permissions.Reports,10,"New Patients to Recall Patients"); TODOKPI ID1000
+                case 9://New patients to recall patients
+                    FormKPINewToRecall FormAR9 = new FormKPINewToRecall();
+                    FormAR9.ShowDialog();
+                    //SecurityLogs.MakeLogEntry(Permissions.Reports,9,"New Patients to Recall Patients"); TODOKPI ID1000
                     break;
                 default:
                     return;

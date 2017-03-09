@@ -11,6 +11,7 @@ namespace OpenDental
 {
     public partial class FormKPINewToRecall : Form
     {
+        int manualdate = 0;
 
         public FormKPINewToRecall()
         {
@@ -20,18 +21,36 @@ namespace OpenDental
 
         private void FormKPINewToRecall_Load(object sender, EventArgs e)
         {
-            dateStart.SelectionStart = DateTime.Today.AddYears(-1);
-            dateEnd.SelectionStart = DateTime.Today;
+ 
+        }
+
+        private void butDateSelec_Click(object sender, EventArgs e)
+        {
+            manualdate = 1;
+            ManualDateSelection();
         }
 
         private void butOK_Click(object sender, EventArgs e)
         {
-            DataTable tablePats = KPINewToRecall.GetNewToRecall(dateStart.SelectionStart, dateEnd.SelectionStart);
+            DataTable tablePats;
+            if (manualdate == 0)
+            {
+                tablePats = KPINewToRecall.GetNewToRecall(DateTime.Today.AddYears(-1), DateTime.Today);
+            } else
+            {
+                tablePats = KPINewToRecall.GetNewToRecall(dateStart.SelectionStart, dateEnd.SelectionStart);
+            }
 
             ReportComplex report = new ReportComplex(true, false);
             report.ReportName = Lan.g(this, "New to Recall Patients");
             report.AddTitle("Title", Lan.g(this, "New to Recall Patients"));
-            report.AddSubTitle("Date", dateStart.SelectionStart.ToShortDateString() + " - " + dateEnd.SelectionStart.ToShortDateString());
+            if (manualdate == 0)
+            {
+                report.AddSubTitle("Date", DateTime.Today.AddYears(-1).ToShortDateString() + " - " + DateTime.Today.ToShortDateString());
+            } else
+            {
+                report.AddSubTitle("Date", dateStart.SelectionStart.ToShortDateString() + " - " + dateEnd.SelectionStart.ToShortDateString());
+            }
             QueryObject query;
             query = report.AddQuery(tablePats, "", "", SplitByKind.None, 0);
             query.AddColumn("Name", 150, FieldValueType.String);

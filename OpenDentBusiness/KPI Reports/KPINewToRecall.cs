@@ -68,7 +68,7 @@ namespace OpenDentBusiness {
             Patient pat;
             String newdate;
             String recalldate;
-                  
+            String recalltype;
 
             for (int j = 0; j < rawrecall.Rows.Count; j++)
             {
@@ -78,6 +78,22 @@ namespace OpenDentBusiness {
                 {
                     newdate = patnums[patnum];
                     recalldate = rawrecall.Rows[j]["ProcDate"].ToString();
+                    recalltype = ReportsComplex.GetTable(@"SELECT t1.Description 
+                                                            FROM recalltype t1
+	                                                            INNER JOIN recalltrigger t2
+		                                                            ON t1.RecallTypeNum = t2.RecallTypeNum
+	                                                            INNER JOIN procedurecode t3
+		                                                            ON t2.CodeNum = t3.CodeNum
+	                                                            INNER JOIN procedurelog t4
+		                                                            ON t3.CodeNum = t4.CodeNum
+	                                                            INNER JOIN patient t5
+		                                                            ON t4.PatNum = t5.PatNum
+                                                                    WHERE t5.PatNum = " + patnum + @";").Rows[1]["Description"].ToString();
+
+                    if (!(recalltype == "Prophy" || recalltype == "Child Prophy" || recalltype == "Perio"))
+                    {
+                        recalltype = "default";
+                    }
 
                     if (withinAYear(newdate, recalldate))
                     {
@@ -88,7 +104,7 @@ namespace OpenDentBusiness {
                         pat.MiddleI = rawrecall.Rows[j]["MiddleI"].ToString();
                         pat.Preferred = rawrecall.Rows[j]["Preferred"].ToString();
                         row["Name"] = pat.GetNameLF();
-                        row["Type of Recall"] = "default"; //TODO: lol what is this supposed to be? there's only one type of recall
+                        row["Type of Recall"] = recalltype; 
                         row["Gender"] = genderFormat(rawnew.Rows[j]["Gender"].ToString());
                         row["Age"] = birthdate_to_age(rawnew.Rows[j]["Birthdate"].ToString()); 
                         table.Rows.Add(row);
