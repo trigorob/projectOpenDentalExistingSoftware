@@ -17,17 +17,21 @@ namespace OpenDentBusiness {
 			table.Columns.Add("Age");
 			table.Columns.Add("Postal Code");
 			table.Columns.Add("Date of Service");
+            table.Columns.Add("Frequency");
             table.Columns.Add("Primary Provider");
             DataRow row;
             string command = @"
-				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, r.ProcDate, p.Birthdate  
+				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, r.ProcDate, p.Birthdate, q.RecallInterval
 				FROM patient p 
 				JOIN procedurelog r ON r.PatNum = p.PatNum 
+                JOIN recall q ON p.PatNum = q.PatNum 
 				WHERE r.ProcDate = (SELECT MAX(r2.ProcDate) 
                 FROM procedurelog r2
                 WHERE r.PatNum = r2.PatNum AND
                 r2.CodeNum = 01202 AND 
-                r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
+                r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @") AND
+                q.RecallTypeNum = 1 AND 
+                q.IsDisabled = 0";
 
 			DataTable raw=ReportsComplex.GetTable(command);
 			Patient pat;
@@ -45,6 +49,8 @@ namespace OpenDentBusiness {
 				row["Postal Code"]=raw.Rows[i]["Zip"].ToString();
                 row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
                 row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
+                Interval frequency = new Interval(Int32.Parse(raw.Rows[i]["RecallInterval"].ToString()));
+                row["Frequency"] = frequency.ToString();
 				table.Rows.Add(row);
 			}
 			return table;
