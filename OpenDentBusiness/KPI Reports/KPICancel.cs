@@ -18,11 +18,13 @@ namespace OpenDentBusiness {
 			table.Columns.Add("Postal Code");
 			table.Columns.Add("Date of Service");
             table.Columns.Add("Primary Provider");
+            table.Columns.Add("Procedure Description");
             DataRow row;
             string command = @"
-				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, p.Birthdate, r.ProcDate, r.Surf, r.ToothRange  
+				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, p.Birthdate, r.ProcDate, a.ProcDescript
                 FROM patient p 
                 JOIN procedurelog r ON r.PatNum = p.PatNum
+                JOIN appointment a ON a.AptNum = r.AptNum
                 WHERE (r.CodeNum = 99998 OR r.CodeNum = 99997) AND 
                 r.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd);
 
@@ -41,6 +43,7 @@ namespace OpenDentBusiness {
                 row["Gender"] = genderFormat(raw.Rows[i]["Gender"].ToString());
 				row["Postal Code"]=raw.Rows[i]["Zip"].ToString();
                 row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
+                row["Procedure Description"] = raw.Rows[i]["ProcDescript"].ToString();
                 row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
 				table.Rows.Add(row);
 			}
