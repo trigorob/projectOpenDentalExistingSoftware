@@ -39,7 +39,6 @@ namespace OpenDentBusiness {
 				pat.Preferred=raw.Rows[i]["Preferred"].ToString();
 				row["Name"]=pat.GetNameLF();
 				row["Primary Provider"]=Providers.GetAbbr(PIn.Long(raw.Rows[i]["PriProv"].ToString()));
-                Console.Write(raw.Rows[i]["Gender"].ToString());
                 row["Gender"] = genderFormat(raw.Rows[i]["Gender"].ToString());
 				row["Postal Code"]=raw.Rows[i]["Zip"].ToString();
                 row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
