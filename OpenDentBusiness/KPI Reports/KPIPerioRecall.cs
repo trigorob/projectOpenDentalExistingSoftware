@@ -34,7 +34,8 @@ namespace OpenDentBusiness {
                 a.IsHygiene = 1 AND 
                 a.AptDateTime = (SELECT MAX(a2.AptDateTime) 
                 FROM appointment a2 
-                WHERE a2.AptNum = a.AptNum)";
+                WHERE a2.AptNum = a.AptNum AND 
+                a2.AptDateTime BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
 
 			DataTable raw=ReportsComplex.GetTable(command);
 			Patient pat;
