@@ -27,8 +27,9 @@ namespace OpenDentBusiness {
                 JOIN recall q ON p.PatNum = q.PatNum 
 				WHERE r.ProcDate = (SELECT MAX(r2.ProcDate) 
                 FROM procedurelog r2
+                JOIN procedurecode c ON r2.CodeNum = c.CodeNum 
                 WHERE r.PatNum = r2.PatNum AND
-                r2.CodeNum = 01202 AND 
+                c.ProcCode = 01202 AND 
                 r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @") AND
                 q.RecallTypeNum = 1 AND 
                 q.IsDisabled = 0";

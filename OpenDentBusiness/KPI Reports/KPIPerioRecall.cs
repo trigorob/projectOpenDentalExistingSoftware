@@ -25,12 +25,13 @@ namespace OpenDentBusiness {
 				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, p.Birthdate, r.RecallInterval, a.AptDateTime, a.ProvHyg
 				FROM patient p 
 				JOIN procedurelog x ON x.PatNum = p.PatNum 
+                JOIN procedurecode c ON c.CodeNum = x.CodeNum 
                 JOIN appointment a ON a.AptNum = x.AptNum 
                 JOIN recall r ON r.PatNum = p.PatNum 
                 WHERE r.IsDisabled = 0 AND 
                 r.RecallTypeNum = 3 AND 
-                x.CodeNum > 40000 AND 
-                x.CodeNum < 50000 AND 
+                c.ProcCode > 40000 AND 
+                c.ProcCode < 50000 AND 
                 a.IsHygiene = 1 AND 
                 a.AptDateTime = (SELECT MAX(a2.AptDateTime) 
                 FROM appointment a2 
