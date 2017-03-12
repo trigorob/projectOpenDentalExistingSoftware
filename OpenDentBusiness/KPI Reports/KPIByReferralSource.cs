@@ -60,14 +60,14 @@ namespace OpenDentBusiness {
                     pat.MiddleI = raw.Rows[i]["MiddleI"].ToString();
                     pat.Preferred = raw.Rows[i]["Preferred"].ToString();
                     row["Name"] = pat.GetNameLF();
-                    row["Date of Service"] = raw.Rows[i]["DateDue"].ToString();
+                    row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString();
                     row["Gender"] = genderFormat(raw.Rows[i]["Gender"].ToString());
                     row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
                     row["Referral Source"] = referralsource;
                     table.Rows.Add(row);
                 }
 			}
-			return table;
+            return resort(table, "Referral Source", "DESC");
 		}
 
         private static string genderFormat(string gNum)
@@ -84,6 +84,14 @@ namespace OpenDentBusiness {
             {
                 return "Unknown";
             }
+        }
+
+        public static DataTable resort(DataTable dt, string colName, string direction)
+        {
+            DataTable dtOut = null;
+            dt.DefaultView.Sort = colName + " " + direction;
+            dtOut = dt.DefaultView.ToTable();
+            return dtOut;
         }
 
         private static int birthdate_to_age(string bd)

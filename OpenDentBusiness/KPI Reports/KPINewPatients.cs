@@ -37,7 +37,7 @@ namespace OpenDentBusiness {
 				pat.MiddleI=raw.Rows[i]["MiddleI"].ToString();
 				pat.Preferred=raw.Rows[i]["Preferred"].ToString();
 				row["Name"]=pat.GetNameLF();
-                row["Date of Service"] = raw.Rows[i]["DateDue"].ToString();
+                row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString();
                 row["Gender"] = genderFormat(raw.Rows[i]["Gender"].ToString());
                 row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString()); 
 				table.Rows.Add(row);
