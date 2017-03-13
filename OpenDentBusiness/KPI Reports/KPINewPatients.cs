@@ -20,12 +20,10 @@ namespace OpenDentBusiness {
             string command = @"
                 SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
                 FROM patient p 
-                JOIN procedurelog r ON r.PatNum = p.PatNum 
-                WHERE r.ProcDate = (SELECT MAX(r2.ProcDate)
-                FROM procedurelog r2
-                WHERE r.PatNum = r2.PatNum AND
-                (r2.CodeNum = 01101 OR r2.CodeNum = 01102 OR r2.CodeNum = 01103) AND
-                r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
+                INNER JOIN procedurelog r ON r.PatNum = p.PatNum 
+                INNER JOIN procedurecode c ON c.CodeNum = r.CodeNum
+                WHERE (c.ProcCode = 01101 OR c.ProcCode = 01102 OR c.ProcCode = 01103) AND
+                (r.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
 
             DataTable raw=ReportsComplex.GetTable(command);
 			Patient pat;

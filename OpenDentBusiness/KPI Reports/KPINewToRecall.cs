@@ -39,14 +39,12 @@ namespace OpenDentBusiness {
             table.Columns.Add("Type of Recall");
             DataRow row;
             string command1 = @"
-                SELECT p.PatNum, r.ProcDate
+                SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
                 FROM patient p 
-                JOIN procedurelog r ON r.PatNum = p.PatNum 
-                WHERE r.ProcDate = (SELECT MAX(r2.ProcDate)
-                    FROM procedurelog r2
-                    WHERE r.PatNum = r2.PatNum AND
-                    (r2.CodeNum = 01101 OR r2.CodeNum = 01102 OR r2.CodeNum = 01103) AND
-                    r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
+                INNER JOIN procedurelog r ON r.PatNum = p.PatNum 
+                INNER JOIN procedurecode c ON c.CodeNum = r.CodeNum
+                WHERE (c.ProcCode = 01101 OR c.ProcCode = 01102 OR c.ProcCode = 01103) AND
+                (r.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
 
             DataTable rawnew = ReportsComplex.GetTable(command1);
             for (int i = 0; i < rawnew.Rows.Count; i++)
@@ -55,14 +53,12 @@ namespace OpenDentBusiness {
             }
 
             string command2 = @"
-                SELECT p.PatNum, p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
+                SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
                 FROM patient p 
-                JOIN procedurelog r ON r.PatNum = p.PatNum 
-                WHERE r.ProcDate = (SELECT MAX(r2.ProcDate)
-                    FROM procedurelog r2
-                    WHERE r.PatNum = r2.PatNum AND
-                    r2.CodeNum = 01202 AND
-                    r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
+                INNER JOIN procedurelog r ON r.PatNum = p.PatNum 
+                INNER JOIN procedurecode c ON c.CodeNum = r.CodeNum
+                WHERE c.ProcCode = 01202 AND
+                (r.ProcDate BETWEEN " + POut.DateT(dateStart.AddYears(-1)) + @" AND " + POut.DateT(dateEnd) + @")";
 
             DataTable rawrecall = ReportsComplex.GetTable(command2);
             Patient pat;
@@ -78,7 +74,7 @@ namespace OpenDentBusiness {
                 {
                     newdate = patnums[patnum];
                     recalldate = rawrecall.Rows[j]["ProcDate"].ToString();
-                    recalltype = ReportsComplex.GetTable(@"SELECT t1.Description 
+                    DataTable temp = ReportsComplex.GetTable(@"SELECT t1.Description 
                                                             FROM recalltype t1
 	                                                            INNER JOIN recalltrigger t2
 		                                                            ON t1.RecallTypeNum = t2.RecallTypeNum
@@ -88,11 +84,14 @@ namespace OpenDentBusiness {
 		                                                            ON t3.CodeNum = t4.CodeNum
 	                                                            INNER JOIN patient t5
 		                                                            ON t4.PatNum = t5.PatNum
-                                                                    WHERE t5.PatNum = " + patnum + @";").Rows[1]["Description"].ToString();
+                                                                    WHERE t5.PatNum = " + patnum + @";");
 
-                    if (!(recalltype == "Prophy" || recalltype == "Child Prophy" || recalltype == "Perio"))
+                    if (temp == null)
                     {
-                        recalltype = "default";
+                        recalltype = "Default";
+                    } else
+                    {
+                        recalltype = temp.Rows[1]["Description"].ToString(); 
                     }
 
                     if (withinAYear(newdate, recalldate))
