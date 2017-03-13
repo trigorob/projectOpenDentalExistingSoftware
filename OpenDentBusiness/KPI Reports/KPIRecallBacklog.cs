@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OpenDentBusiness.KPI_Reports
 {
-    class KPIRecallBacklog
+    public class KPIRecallBacklog
     {
         public static DataTable GetRecallBacklog(DateTime dateStart, DateTime dateEnd)
         {
@@ -33,7 +33,7 @@ namespace OpenDentBusiness.KPI_Reports
 	                JOIN procedureCode c ON r.CodeNum = c.CodeNum
                     JOIN recall q ON p.PatNum = q.PatNum
                     JOIN appointment a ON r.PatNum = a.PatNum  WHERE c.ProcCode=01202 AND a.UnschedStatus=13 AND
-                    r.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
+                    r.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd);
 
 
             DataTable raw = ReportsComplex.GetTable(command);
@@ -79,15 +79,10 @@ namespace OpenDentBusiness.KPI_Reports
         ///<summary>Returns true if string matches ContactMethod enum names.</summary>
         private static string getContactMethod(string contactMethodName)
         {
+            int contact = Int32.Parse(contactMethodName);
             string[] contactNames = Enum.GetNames(typeof(ContactMethod));
-            for (int i = 0; i < contactNames.Length; i++)
-            {
-                if (contactNames[i] == contactMethodName)
-                {
-                    return contactNames[i];
-                }
-            }
-            return "Unknown";
+
+            return contactNames[contact];
         }
 
     }

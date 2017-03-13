@@ -2,6 +2,7 @@
  OpenDentBusiness/obj/
  OpenDentHL7/bin/
  OpenDentHL7/obj/
+ OpenDental/bin/
  OpenDental/bin/Debug/OpenDentBusiness.dll
  OpenDental/bin/Debug/OpenDentBusiness.pdb
  OpenDental/bin/Debug/OpenDentBusiness.xml
@@ -69,3 +70,9 @@
  packages/
  xCrudGenerator/bin/
  xCrudGenerator/obj/
+.vs/
+ CodeBase/
+ DataBaseIntegrityCheck/
+ MobileWeb/bin
+ ODR/bin
+ ODR/obj
