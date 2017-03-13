@@ -39,7 +39,7 @@ namespace OpenDentBusiness {
             table.Columns.Add("Type of Recall");
             DataRow row;
             string command1 = @"
-                SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
+                SELECT p.PatNum, p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
                 FROM patient p 
                 INNER JOIN procedurelog r ON r.PatNum = p.PatNum 
                 INNER JOIN procedurecode c ON c.CodeNum = r.CodeNum
@@ -53,7 +53,7 @@ namespace OpenDentBusiness {
             }
 
             string command2 = @"
-                SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
+                SELECT p.PatNum, p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
                 FROM patient p 
                 INNER JOIN procedurelog r ON r.PatNum = p.PatNum 
                 INNER JOIN procedurecode c ON c.CodeNum = r.CodeNum
@@ -103,9 +103,9 @@ namespace OpenDentBusiness {
                         pat.MiddleI = rawrecall.Rows[j]["MiddleI"].ToString();
                         pat.Preferred = rawrecall.Rows[j]["Preferred"].ToString();
                         row["Name"] = pat.GetNameLF();
-                        row["Type of Recall"] = recalltype; 
                         row["Gender"] = genderFormat(rawnew.Rows[j]["Gender"].ToString());
-                        row["Age"] = birthdate_to_age(rawnew.Rows[j]["Birthdate"].ToString()); 
+                        row["Age"] = birthdate_to_age(rawnew.Rows[j]["Birthdate"].ToString());
+                        row["Type of Recall"] = recalltype;
                         table.Rows.Add(row);
                     }
 

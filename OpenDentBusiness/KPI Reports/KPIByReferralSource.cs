@@ -20,7 +20,7 @@ namespace OpenDentBusiness {
             table.Columns.Add("Referral Source");
             DataRow row;
             string command = @"
-                SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
+                SELECT p.PatNum, p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
                 FROM patient p 
                 INNER JOIN procedurelog r ON r.PatNum = p.PatNum 
                 INNER JOIN procedurecode c ON c.CodeNum = r.CodeNum
@@ -42,10 +42,10 @@ namespace OpenDentBusiness {
                 referralsource = null;
                 rawsource = ReportsComplex.GetTable(@"SELECT r.LName, r.FName, r.IsDoctor, r.Specialty
                 FROM referral r
+                    INNER JOIN refattach a
+                        ON r.ReferralNum = a.ReferralNum
                     INNER JOIN patient p
-	                    ON r.PatNum = p.PatNum
-                    INNER JOIN procedurelog pl
-	                    ON p.PatNum = " + patnums[i] + @")");
+	                    ON a.PatNum = " + patnums[i]);
 
                 if (rawsource != null) {
                     referralsource = rawsource.Rows[1]["Lname"].ToString() + ", " + rawsource.Rows[1]["FName"].ToString();
@@ -57,9 +57,9 @@ namespace OpenDentBusiness {
                     pat.MiddleI = raw.Rows[i]["MiddleI"].ToString();
                     pat.Preferred = raw.Rows[i]["Preferred"].ToString();
                     row["Name"] = pat.GetNameLF();
-                    row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString();
                     row["Gender"] = genderFormat(raw.Rows[i]["Gender"].ToString());
                     row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
+                    row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString();
                     row["Referral Source"] = referralsource;
                     table.Rows.Add(row);
                 }
