@@ -7,109 +7,61 @@ using System.Collections;
 namespace OpenDentBusiness {
 	public class KPINewToRecall {
 
-        //actually just true if new then recall, false if recall then new (aka patient became new again)
-        private static bool withinAYear(String startdate, String enddate)
-        {
- 
-            DateTime start = Convert.ToDateTime(startdate);
-            DateTime end = Convert.ToDateTime(enddate);
-
-            //if new patient procedure happens after recall, it means patient took break longer than year and is new again
-            // if recall happens after new, can be assumed to be within timeframe (else why would it be billed recall?)
-            if (start.Year > end.Year ||
-                (start.Year == end.Year && start.Month > end.Month)) 
-            {
-                return false;
-            }
-
-            return true;
-        }
-
         ///<summary>If not using clinics then supply an empty list of clinicNums. dateStart and dateEnd can be MinVal/MaxVal to indicate "forever".</summary>
         public static DataTable GetNewToRecall(DateTime dateStart,DateTime dateEnd) {
 			if(RemotingClient.RemotingRole==RemotingRole.ClientWeb) {
 				return Meth.GetTable(MethodBase.GetCurrentMethod(),dateStart,dateEnd);
 			}
             DataTable table = new DataTable();
-            Dictionary<long, String> patnums = new Dictionary<long, String>();
 
             table.Columns.Add("Name");
             table.Columns.Add("Gender");
             table.Columns.Add("Age");
             table.Columns.Add("Type of Recall");
             DataRow row;
-            string command1 = @"
-                SELECT p.PatNum, p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
-                FROM patient p 
-                INNER JOIN procedurelog r ON r.PatNum = p.PatNum 
-                INNER JOIN procedurecode c ON c.CodeNum = r.CodeNum
-                WHERE (c.ProcCode = 01101 OR c.ProcCode = 01102 OR c.ProcCode = 01103) AND
-                (r.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
-
-            DataTable rawnew = ReportsComplex.GetTable(command1);
-            for (int i = 0; i < rawnew.Rows.Count; i++)
-            {
-                patnums.Add(Convert.ToInt64(rawnew.Rows[i]["PatNum"].ToString()), rawnew.Rows[i]["ProcDate"].ToString());
-            }
-
-            string command2 = @"
-                SELECT p.PatNum, p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
-                FROM patient p 
-                INNER JOIN procedurelog r ON r.PatNum = p.PatNum 
-                INNER JOIN procedurecode c ON c.CodeNum = r.CodeNum
+            string command = @"
+               SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, p.Birthdate, t1.Description  
+	FROM patient p 
+		INNER JOIN procedurelog l ON l.PatNum = p.PatNum 
+		INNER JOIN procedurecode c ON c.CodeNum = l.CodeNum
+        INNER JOIN recalltrigger t2 ON c.CodeNum = t2.CodeNum
+        INNER JOIN recalltype t1 ON t2.RecallTypeNum = t1.RecallTypeNum
                 WHERE c.ProcCode = 01202 AND
-                (r.ProcDate BETWEEN " + POut.DateT(dateStart.AddYears(-1)) + @" AND " + POut.DateT(dateEnd) + @")";
+					  (l.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @") AND
+                      l.PatNum IN (SELECT p2.PatNum
+								FROM patient p2
+									INNER JOIN procedurelog l2 ON l2.PatNum = p2.PatNum 
+									INNER JOIN procedurecode c2 ON c2.CodeNum = l2.CodeNum
+								WHERE (c2.ProcCode = 01101 OR c2.ProcCode = 01102 OR c2.ProcCode = 01103) AND
+										l2.ProcDate < l.ProcDate AND
+                                        l2.ProcDate > (DATE_SUB(l.ProcDate,INTERVAL 1 YEAR)))";
 
-            DataTable rawrecall = ReportsComplex.GetTable(command2);
+            DataTable rawrecall = ReportsComplex.GetTable(command);
+
             Patient pat;
-            String newdate;
-            String recalldate;
             String recalltype;
 
             for (int j = 0; j < rawrecall.Rows.Count; j++)
             {
-                long patnum = Convert.ToInt64(rawrecall.Rows[j]["PatNum"].ToString());
+                row = table.NewRow();
+                pat = new Patient();
 
-                if (patnums.ContainsKey(patnum))
+                recalltype = rawrecall.Rows[j]["Description"].ToString();
+                if (recalltype == null || recalltype == "")
                 {
-                    newdate = patnums[patnum];
-                    recalldate = rawrecall.Rows[j]["ProcDate"].ToString();
-                    DataTable temp = ReportsComplex.GetTable(@"SELECT t1.Description 
-                                                            FROM recalltype t1
-	                                                            INNER JOIN recalltrigger t2
-		                                                            ON t1.RecallTypeNum = t2.RecallTypeNum
-	                                                            INNER JOIN procedurecode t3
-		                                                            ON t2.CodeNum = t3.CodeNum
-	                                                            INNER JOIN procedurelog t4
-		                                                            ON t3.CodeNum = t4.CodeNum
-	                                                            INNER JOIN patient t5
-		                                                            ON t4.PatNum = t5.PatNum
-                                                                    WHERE t5.PatNum = " + patnum + @";");
-
-                    if (temp == null)
-                    {
-                        recalltype = "Default";
-                    } else
-                    {
-                        recalltype = temp.Rows[1]["Description"].ToString(); 
-                    }
-
-                    if (withinAYear(newdate, recalldate))
-                    {
-                        row = table.NewRow();
-                        pat = new Patient();
-                        pat.LName = rawrecall.Rows[j]["LName"].ToString();
-                        pat.FName = rawrecall.Rows[j]["FName"].ToString();
-                        pat.MiddleI = rawrecall.Rows[j]["MiddleI"].ToString();
-                        pat.Preferred = rawrecall.Rows[j]["Preferred"].ToString();
-                        row["Name"] = pat.GetNameLF();
-                        row["Gender"] = genderFormat(rawnew.Rows[j]["Gender"].ToString());
-                        row["Age"] = birthdate_to_age(rawnew.Rows[j]["Birthdate"].ToString());
-                        row["Type of Recall"] = recalltype;
-                        table.Rows.Add(row);
-                    }
-
+                    recalltype = "Default";
                 }
+                pat.LName = rawrecall.Rows[j]["LName"].ToString();
+                pat.FName = rawrecall.Rows[j]["FName"].ToString();
+                pat.MiddleI = rawrecall.Rows[j]["MiddleI"].ToString();
+                pat.Preferred = rawrecall.Rows[j]["Preferred"].ToString();
+
+                row["Name"] = pat.GetNameLF();
+                row["Gender"] = genderFormat(rawrecall.Rows[j]["Gender"].ToString());
+                row["Age"] = birthdate_to_age(rawrecall.Rows[j]["Birthdate"].ToString());
+                row["Type of Recall"] = recalltype;
+                table.Rows.Add(row);
+                
             }
 
             return table;

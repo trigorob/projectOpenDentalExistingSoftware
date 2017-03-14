@@ -20,49 +20,36 @@ namespace OpenDentBusiness {
             table.Columns.Add("Referral Source");
             DataRow row;
             string command = @"
-                SELECT p.PatNum, p.LName, p.FName, p.MiddleI, p.Gender, p.Preferred, r.ProcDate, p.Birthdate  
-                FROM patient p 
-                INNER JOIN procedurelog r ON r.PatNum = p.PatNum 
-                INNER JOIN procedurecode c ON c.CodeNum = r.CodeNum
-                WHERE (c.ProcCode = 01101 OR c.ProcCode = 01102 OR c.ProcCode = 01103) AND
-                (r.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
+                SELECT p.LName AS PLName, p.FName AS PFName, p.MiddleI, p.Gender, p.Preferred, l.ProcDate, p.Birthdate, 
+						r.LName, r.FName, r.IsDoctor
+		        FROM patient p
+                    INNER JOIN procedurelog l ON l.PatNum = p.PatNum 
+                    INNER JOIN procedurecode c ON c.CodeNum = l.CodeNum
+                    INNER JOIN refattach a ON p.PatNum = a.PatNum
+                    INNER JOIN referral r ON a.ReferralNum = r.ReferralNum
+                        WHERE (c.ProcCode = 01101 OR c.ProcCode = 01102 OR c.ProcCode = 01103) AND
+                        (l.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
 
-            DataTable raw=ReportsComplex.GetTable(command);
-            ArrayList patnums = new ArrayList();
-            for (int i = 0; i < raw.Rows.Count; i++)
-            {
-                patnums.Add(Convert.ToInt64(raw.Rows[i]["PatNum"].ToString()));
-            }
-        
+            DataTable raw=ReportsComplex.GetTable(command);        
             Patient pat;
             String referralsource;
-            DataTable rawsource;
 
-			for(int i=0;i<patnums.Count;i++) {
-                referralsource = null;
-                rawsource = ReportsComplex.GetTable(@"SELECT r.LName, r.FName, r.IsDoctor, r.Specialty
-                FROM referral r
-                    INNER JOIN refattach a
-                        ON r.ReferralNum = a.ReferralNum
-                    INNER JOIN patient p
-	                    ON a.PatNum = " + patnums[i]);
+			for(int i = 0; i < raw.Rows.Count; i++) {
+                row = table.NewRow();
+                pat = new Patient();
+                referralsource = raw.Rows[i]["Lname"].ToString() + ", " + raw.Rows[i]["FName"].ToString();
+                if (raw.Rows[i]["IsDoctor"].ToString() == "1") { referralsource += " (Doctor)"; }
+                pat.LName = raw.Rows[i]["PLName"].ToString();
+                pat.FName = raw.Rows[i]["PFName"].ToString();
+                pat.MiddleI = raw.Rows[i]["MiddleI"].ToString();
+                pat.Preferred = raw.Rows[i]["Preferred"].ToString();
 
-                if (rawsource != null) {
-                    referralsource = rawsource.Rows[1]["Lname"].ToString() + ", " + rawsource.Rows[1]["FName"].ToString();
-                    if (rawsource.Rows[1]["IsDoctor"].ToString() == "1") { referralsource += " (Doctor)"; }
-                    row = table.NewRow();
-                    pat = new Patient();
-                    pat.LName = raw.Rows[i]["LName"].ToString();
-                    pat.FName = raw.Rows[i]["FName"].ToString();
-                    pat.MiddleI = raw.Rows[i]["MiddleI"].ToString();
-                    pat.Preferred = raw.Rows[i]["Preferred"].ToString();
-                    row["Name"] = pat.GetNameLF();
-                    row["Gender"] = genderFormat(raw.Rows[i]["Gender"].ToString());
-                    row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
-                    row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString();
-                    row["Referral Source"] = referralsource;
-                    table.Rows.Add(row);
-                }
+                row["Name"] = pat.GetNameLF();
+                row["Gender"] = genderFormat(raw.Rows[i]["Gender"].ToString());
+                row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
+                row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString();
+                row["Referral Source"] = referralsource;
+                table.Rows.Add(row);
 			}
             return resort(table, "Referral Source", "DESC");
 		}
