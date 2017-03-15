@@ -29,11 +29,13 @@ namespace OpenDentBusiness.KPI_Reports
             string command = @"
                 SELECT p.LName, p.FName, p.MiddleI, p.Preferred, p.Gender, p.PreferContactMethod, p.HmPhone, p.Email, r.ProcDate, c.ProcCode, r.AptNum, a.ProvHyg, a.AptDateTime, q.DateDue
                 FROM patient p 
-	                JOIN procedurelog r ON r.PatNum = p.PatNum
-	                JOIN procedureCode c ON r.CodeNum = c.CodeNum
-                    JOIN recall q ON p.PatNum = q.PatNum
-                    JOIN appointment a ON r.PatNum = a.PatNum  WHERE c.ProcCode=01202 AND a.UnschedStatus=13 AND
-                    r.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd);
+	                INNER JOIN procedurelog r ON r.PatNum = p.PatNum
+	                INNER JOIN procedureCode c ON r.CodeNum = c.CodeNum
+                    INNER JOIN recall q ON p.PatNum = q.PatNum
+                    INNER JOIN appointment a ON r.PatNum = a.PatNum  WHERE c.ProcCode=01202 AND a.AptStatus=6 AND
+                    r.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + 
+                @" GROUP BY p.PatNUm";
+
 
 
             DataTable raw = ReportsComplex.GetTable(command);
