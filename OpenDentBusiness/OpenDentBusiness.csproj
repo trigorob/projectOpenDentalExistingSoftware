@@ -773,7 +773,11 @@
     <Compile Include="InternalTools\Phones\TableTypes\PhoneMetric.cs" />
     <Compile Include="InternalTools\Phones\TableTypes\PhoneNumber.cs" />
     <Compile Include="KPI Reports\KPIActiveRecall.cs" />
+<<<<<<< HEAD
     <Compile Include="KPI Reports\KPIRecallBacklog.cs" />
+=======
+    <Compile Include="KPI Reports\KPIPerioRecall.cs" />
+>>>>>>> 2active_perio
     <Compile Include="Misc\ConvertDatabases3.cs" />
     <Compile Include="Misc\ConvertDatabases4.cs" />
     <Compile Include="Misc\EhrCCD.cs" />
