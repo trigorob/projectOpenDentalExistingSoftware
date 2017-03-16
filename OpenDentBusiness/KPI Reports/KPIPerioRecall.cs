@@ -36,7 +36,7 @@ namespace OpenDentBusiness {
                 a.AptDateTime = (SELECT MAX(a2.AptDateTime) 
                 FROM appointment a2 
                 WHERE a2.AptNum = a.AptNum AND 
-                a2.AptDateTime BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
+                a2.AptDateTime BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @") GROUP BY p.PatNum";
 
 			DataTable raw=ReportsComplex.GetTable(command);
 			Patient pat;

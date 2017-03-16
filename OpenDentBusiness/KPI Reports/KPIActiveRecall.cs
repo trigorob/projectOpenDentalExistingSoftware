@@ -32,7 +32,7 @@ namespace OpenDentBusiness {
                 c.ProcCode = 01202 AND 
                 r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @") AND
                 q.RecallTypeNum = 1 AND 
-                q.IsDisabled = 0";
+                q.IsDisabled = 0 GROUP BY p.PatNum";
 
 			DataTable raw=ReportsComplex.GetTable(command);
 			Patient pat;
