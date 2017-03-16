@@ -11,6 +11,7 @@ using OpenDentBusiness;
 using OpenDentalWpf;
 using OpenDental.Bridges;
 using System.Linq;
+using OpenDental.KPI_Reports;
 
 namespace OpenDental {
 	/// <summary>
@@ -117,7 +118,8 @@ namespace OpenDental {
 
 		private void FormKPIMore_Load(object sender,EventArgs e) {
 			listKPI.Items.AddRange(new string[] { //Delete this comment on deliver: STEP 1 Add report to list
-				Lan.g(this,"Patients on Active Recall")
+				Lan.g(this,"Patients on Active Recall"),
+                Lan.g(this, "Backlog of Recall Patients"),
 			});
 		}
 		private void listKPI_MouseDown(object sender,MouseEventArgs e) {
@@ -131,6 +133,10 @@ namespace OpenDental {
 					FormAR.ShowDialog();
 					//SecurityLogs.MakeLogEntry(Permissions.Reports,0,"Active Patients"); TODOKPI ID100
 					break;
+                case 1://Backlog of recall patients
+                    FormKPIBacklogRecall FormBR = new FormKPIBacklogRecall();
+			        FormBR.ShowDialog();
+			        break;
 			}
 		}
 
