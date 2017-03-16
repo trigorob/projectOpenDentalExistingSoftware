@@ -3975,6 +3975,18 @@
     <Compile Include="KPI Reports\FormKPIBacklogRecall.Designer.cs">
       <DependentUpon>FormKPIBacklogRecall.cs</DependentUpon>
     </Compile>
+    <Compile Include="KPI Reports\FormKPICompletedCases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI Reports\FormKPICompletedCases.Designer.cs">
+      <DependentUpon>FormKPICompletedCases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KPI Reports\FormKPIPendingTreatments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KPI Reports\FormKPIPendingTreatments.designer.cs">
+      <DependentUpon>FormKPIPendingTreatments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main Modules\ContrAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
