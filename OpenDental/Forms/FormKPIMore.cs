@@ -121,7 +121,9 @@ namespace OpenDental {
 				Lan.g(this,"Patients on Active Recall"),
                 Lan.g(this,"Patients on Perio Recall"),
                 Lan.g(this, "Backlog of Recall Patients"),
-			});
+                Lan.g(this,"Patients who missed their appointment"),
+                Lan.g(this,"Patients who cancelled short notice")
+            });
 		}
 		private void listKPI_MouseDown(object sender,MouseEventArgs e) {
 			int selected=listKPI.IndexFromPoint(e.Location);
@@ -143,8 +145,16 @@ namespace OpenDental {
                     FormKPIBacklogRecall FormBR = new FormKPIBacklogRecall();
 			        FormBR.ShowDialog();
 			        break;
-			}
-		}
+                case 3: //Patients who did not show for their appt
+                    FormKPINoShowAppt FormNSA = new FormKPINoShowAppt(); 
+                    FormNSA.ShowDialog();
+                    break;
+                case 4: //Patients who cancelled short notice
+                    FormKPICancel FormC = new FormKPICancel();
+                    FormC.ShowDialog();
+                    break;
+            }
+        }
 
 		private void butClose_Click(object sender,System.EventArgs e) {
 			Close();
