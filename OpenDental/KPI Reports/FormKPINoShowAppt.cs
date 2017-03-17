@@ -35,7 +35,8 @@ namespace OpenDental {
             query.AddColumn("Postal Code",90,FieldValueType.String);
 			query.AddColumn("Date of Service",100,FieldValueType.String);
 			query.AddColumn("Primary Provider",80,FieldValueType.String);
-			query.AddGroupSummaryField("Patient Count:","Name", "Provider", SummaryOperation.Count);
+            query.AddColumn("Procedure Description", 100, FieldValueType.String);
+            query.AddGroupSummaryField("Patient Count:","Name", "Provider", SummaryOperation.Count);
 			report.AddPageNum();
 			if(!report.SubmitQueries()) {
 				return;

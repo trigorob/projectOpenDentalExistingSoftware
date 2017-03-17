@@ -24,8 +24,9 @@ namespace OpenDentBusiness {
 				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, p.Birthdate, r.ProcDate, a.ProcDescript
                 FROM patient p 
                 JOIN procedurelog r ON r.PatNum = p.PatNum
+                JOIN procedurecode c ON r.CodeNum = c.CodeNum
                 JOIN appointment a ON a.AptNum = r.AptNum 
-                WHERE r.CodeNum = 99999 AND 
+                WHERE c.ProcCode = 99999 AND 
                 r.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd);
 
 			DataTable raw=ReportsComplex.GetTable(command);
