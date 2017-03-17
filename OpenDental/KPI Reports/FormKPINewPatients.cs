@@ -18,7 +18,7 @@ namespace OpenDental{
 
         private void FormKPINewPatients_Load(object sender, EventArgs e)
         {
-            dateStart.SelectionStart = DateTime.Today.AddYears(-1);
+            dateStart.SelectionStart = DateTime.Today.AddMonths(-1); //default one month
             dateEnd.SelectionStart = DateTime.Today;
         }
 
