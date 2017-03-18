@@ -122,7 +122,13 @@ namespace OpenDental {
                 Lan.g(this,"Patients on Perio Recall"),
                 Lan.g(this, "Backlog of Recall Patients"),
                 Lan.g(this,"Patients who missed their appointment"),
-                Lan.g(this,"Patients who cancelled short notice")
+                Lan.g(this,"Patients who cancelled short notice"),
+                Lan.g(this,"Total Non-Productive Practice Time"),
+                Lan.g(this,"Downtime for Each Provider"),
+                Lan.g(this,"List of New Patients"),
+                Lan.g(this,"New Patients by Referral Source"),
+                Lan.g(this,"New Patients to Recall Patients"),
+                Lan.g(this,"Case Presentation")
             });
 		}
 		private void listKPI_MouseDown(object sender,MouseEventArgs e) {
@@ -130,7 +136,8 @@ namespace OpenDental {
 			if(selected==-1) {
 				return;
 			}
-			switch(selected) { //Delete this comment on deliver: STEP 2 Add case to switch statement
+
+            switch (selected) { //Delete this comment on deliver: STEP 2 Add case to switch statement
                 case 0://Patients on Active Recall
                     FormKPIActiveRecall FormAR = new FormKPIActiveRecall(); //Delete this comment on deliver: STEP 3 Create form cs and designer file (add to project as well) for criteria selection
 					FormAR.ShowDialog();
@@ -153,8 +160,32 @@ namespace OpenDental {
                     FormKPICancel FormC = new FormKPICancel();
                     FormC.ShowDialog();
                     break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7://New patients
+                    FormKPINewPatients FormAR7 = new FormKPINewPatients(); 
+                    FormAR7.ShowDialog();
+                    //SecurityLogs.MakeLogEntry(Permissions.Reports,7,"New Patients"); TODOKPI ID800
+                    break;
+                case 8://New patients by referral source
+                    FormKPIByReferralSource FormAR8 = new FormKPIByReferralSource();
+                    FormAR8.ShowDialog();
+                    //SecurityLogs.MakeLogEntry(Permissions.Reports,8,"New Patients by Referrl"); TODOKPI ID900
+                    break;
+                case 9://New patients to recall patients
+                    FormKPINewToRecall FormAR9 = new FormKPINewToRecall();
+                    FormAR9.ShowDialog();
+                    //SecurityLogs.MakeLogEntry(Permissions.Reports,9,"New Patients to Recall Patients"); TODOKPI ID1000
+                    break;
+                case 10:
+                    break;
+                default:
+                    return;
             }
-        }
+		}
+>>>>>>> daphne
 
 		private void butClose_Click(object sender,System.EventArgs e) {
 			Close();
