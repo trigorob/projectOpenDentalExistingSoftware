@@ -3975,8 +3975,6 @@
     <Compile Include="KPI Reports\FormKPIActiveRecall.Designer.cs">
       <DependentUpon>FormKPIActiveRecall.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Compile Include="KPI Reports\FormKPIBacklogRecall.cs">
       <SubType>Form</SubType>
     </Compile>
