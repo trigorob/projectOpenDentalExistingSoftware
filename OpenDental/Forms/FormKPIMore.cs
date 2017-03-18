@@ -185,7 +185,6 @@ namespace OpenDental {
                     return;
             }
 		}
->>>>>>> daphne
 
 		private void butClose_Click(object sender,System.EventArgs e) {
 			Close();
