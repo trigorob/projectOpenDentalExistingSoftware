@@ -85,8 +85,7 @@ namespace OpenDental{
 		private System.Windows.Forms.MenuItem menuItemRecall;
 		private System.Windows.Forms.MenuItem menuItemEmployees;
 		private System.Windows.Forms.MenuItem menuItemPractice;
-        private System.Windows.Forms.MenuItem menuItemKPI;
-        private System.Windows.Forms.MenuItem menuItemPrescriptions;
+		private System.Windows.Forms.MenuItem menuItemPrescriptions;
 		private System.Windows.Forms.MenuItem menuItemProviders;
 		private System.Windows.Forms.MenuItem menuItemProcCodes;
 		private System.Windows.Forms.MenuItem menuItemPrintScreen;
@@ -676,8 +675,7 @@ namespace OpenDental{
 			this.menuItemReportsStandard = new System.Windows.Forms.MenuItem();
 			this.menuItemReportsGraphic = new System.Windows.Forms.MenuItem();
 			this.menuItemReportsUserQuery = new System.Windows.Forms.MenuItem();
-            this.menuItemKPI = new System.Windows.Forms.MenuItem();
-            this.menuItemCustomReports = new System.Windows.Forms.MenuItem();
+			this.menuItemCustomReports = new System.Windows.Forms.MenuItem();
 			this.menuItemTools = new System.Windows.Forms.MenuItem();
 			this.menuItemJobManager = new System.Windows.Forms.MenuItem();
 			this.menuItemPrintScreen = new System.Windows.Forms.MenuItem();
@@ -795,7 +793,6 @@ namespace OpenDental{
             this.menuItemCustomReports,
             this.menuItemTools,
             this.menuClinics,
-            this.menuItemKPI,
             this.menuItemEServices,
             this.menuItemAlerts,
             this.menuItemHelp,
@@ -1547,17 +1544,10 @@ namespace OpenDental{
 			this.menuItemZipCodes.Index = 21;
 			this.menuItemZipCodes.Text = "&Zip Codes";
 			this.menuItemZipCodes.Click += new System.EventHandler(this.menuItemZipCodes_Click);
-            //
-            // menuItemKPI
-            //
-            this.menuItemKPI.Index = 8;
-            this.menuItemKPI.Shortcut = System.Windows.Forms.Shortcut.CtrlK;
-            this.menuItemKPI.Text = "&KPIs";
-            this.menuItemKPI.Click += new System.EventHandler(this.menuItemKPI_Click);
-            // 
-            // menuItemReportsHeader
-            // 
-            this.menuItemReportsHeader.Index = 4;
+			// 
+			// menuItemReportsHeader
+			// 
+			this.menuItemReportsHeader.Index = 4;
 			this.menuItemReportsHeader.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItemReportsStandard,
             this.menuItemReportsGraphic,
@@ -1878,7 +1868,7 @@ namespace OpenDental{
 			// 
 			// menuItemEServices
 			// 
-			this.menuItemEServices.Index = 9;
+			this.menuItemEServices.Index = 8;
 			this.menuItemEServices.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuMobileWeb,
             this.menuItemPatientPortal,
@@ -1952,7 +1942,7 @@ namespace OpenDental{
 			// 
 			// menuItemAlerts
 			// 
-			this.menuItemAlerts.Index = 10;
+			this.menuItemAlerts.Index = 9;
 			this.menuItemAlerts.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItemNoAlerts});
 			this.menuItemAlerts.OwnerDraw = true;
@@ -1968,7 +1958,7 @@ namespace OpenDental{
 			// 
 			// menuItemHelp
 			// 
-			this.menuItemHelp.Index = 11;
+			this.menuItemHelp.Index = 10;
 			this.menuItemHelp.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItemRemote,
             this.menuItemHelpWindows,
@@ -2032,7 +2022,7 @@ namespace OpenDental{
 			// 
 			// menuItemActionNeeded
 			// 
-			this.menuItemActionNeeded.Index = 12;
+			this.menuItemActionNeeded.Index = 11;
 			this.menuItemActionNeeded.OwnerDraw = true;
 			this.menuItemActionNeeded.Text = "Action Needed";
 			this.menuItemActionNeeded.Visible = false;
@@ -7394,29 +7384,15 @@ namespace OpenDental{
 			MessageBox.Show(msgText);
 		}
 
-        #endregion
+		#endregion
 
-        #region Clinics
-        //menuClinics is a dynamic menu that is maintained within RefreshMenuClinics()
-        #endregion
+		#region Clinics
+		//menuClinics is a dynamic menu that is maintained within RefreshMenuClinics()
+		#endregion
 
-        #region KPI
+		#region eServices
 
-        private void menuItemKPI_Click(object sender, EventArgs e)
-        {
-            //if (!Security.IsAuthorized(Permissions.Reports)) - TODOKPI: Figure out how to add to security - ID100
-            //{
-            //    return;
-            //}
-            FormKPIMore FormR = new FormKPIMore();
-            FormR.ShowDialog();
-        }
-
-        #endregion
-
-        #region eServices
-
-        private void menuItemEServices_DrawItem(object sender,DrawItemEventArgs e) {
+		private void menuItemEServices_DrawItem(object sender,DrawItemEventArgs e) {
 			//Get the text that is displaying from the menu item compenent.
 			MenuItem menuItem=(MenuItem)sender;
 			Color colorText=Color.White;
