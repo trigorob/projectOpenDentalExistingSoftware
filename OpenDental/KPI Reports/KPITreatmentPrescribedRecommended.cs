@@ -10,7 +10,7 @@ namespace OpenDentBusiness
     {
 
         ///<summary>If not using clinics then supply an empty list of clinicNums. dateStart and dateEnd can be MinVal/MaxVal to indicate "forever".</summary>
-        public static DataTable GetRecTreatmentYYY(DateTime dateStart, DateTime dateEnd, String pc, int pnum)
+        public static DataTable GetRecTreatmentYYY(DateTime dateStart, DateTime dateEnd, String pc, long pnum)
         {
             if (RemotingClient.RemotingRole == RemotingRole.ClientWeb)
             {
@@ -37,7 +37,7 @@ namespace OpenDentBusiness
                              WHERE r.PatNum = r2.PatNum AND
                              r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")
                        AND rc.ProcCode = " + POut.String(pc) + @" 
-                       AND p.PatNum = " + POut.Int(pnum) + @"
+                       AND p.PatNum = " + POut.Long(pnum) + @"
                 ORDER BY r.ProcDate";
 
             DataTable raw = ReportsComplex.GetTable(command);
@@ -60,7 +60,7 @@ namespace OpenDentBusiness
             return table;
         }
 
-        public static DataTable GetRecTreatmentYYN(DateTime dateStart, DateTime dateEnd, int pnum)
+        public static DataTable GetRecTreatmentYYN(DateTime dateStart, DateTime dateEnd, long pnum)
         {
             
             DataTable table = new DataTable();
@@ -83,7 +83,7 @@ namespace OpenDentBusiness
                              FROM procedurelog r2
                              WHERE r.PatNum = r2.PatNum AND
                              r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")
-                      AND  p.PatNum = " + POut.Int(pnum) + @"
+                      AND  p.PatNum = " + POut.Long(pnum) + @"
                 ORDER BY r.ProcDate";
 
             DataTable raw = ReportsComplex.GetTable(command);
@@ -241,7 +241,7 @@ namespace OpenDentBusiness
             return table;
         }
         // finish these queries.
-        public static DataTable GetRecTreatmentNYY(int pnum, String pc)
+        public static DataTable GetRecTreatmentNYY(long pnum, String pc)
         {
             if (RemotingClient.RemotingRole == RemotingRole.ClientWeb)
             {
@@ -263,7 +263,7 @@ namespace OpenDentBusiness
                 JOIN treatplan t ON t.PatNum = p.PatNum
                 JOIN treatplanattach tpa ON tpa.ProcNum = r.ProcNum AND tpa.TreatPlanNum = t.TreatPlanNum
                 JOIN procedurecode rc ON rc.CodeNum = r.CodeNum
-                WHERE rc.ProcCode = " + POut.String(pc) + @" AND p.PatNum = " + POut.Int(pnum) + @"
+                WHERE rc.ProcCode = " + POut.String(pc) + @" AND p.PatNum = " + POut.Long(pnum) + @"
                 ORDER BY r.ProcDate";
 
             DataTable raw = ReportsComplex.GetTable(command);
@@ -286,7 +286,7 @@ namespace OpenDentBusiness
             return table;
         }
 
-        public static DataTable GetRecTreatmentNYN(int pnum)
+        public static DataTable GetRecTreatmentNYN(long pnum)
         {
             if (RemotingClient.RemotingRole == RemotingRole.ClientWeb)
             {
@@ -308,7 +308,7 @@ namespace OpenDentBusiness
                 JOIN treatplan t ON t.PatNum = p.PatNum
                 JOIN treatplanattach tpa ON tpa.ProcNum = r.ProcNum AND tpa.TreatPlanNum = t.TreatPlanNum
                 JOIN procedurecode rc ON rc.CodeNum = r.CodeNum
-                WHERE p.PatNum = " + POut.Int(pnum) + @"
+                WHERE p.PatNum = " + POut.Long(pnum) + @"
                 ORDER BY r.ProcDate";
 
             DataTable raw = ReportsComplex.GetTable(command);

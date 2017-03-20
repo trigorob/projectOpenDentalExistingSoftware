@@ -138,6 +138,10 @@ namespace OpenDental
         ///<summary></summary>
         public void FormSelectPatient_Load(object sender, System.EventArgs e)
         {
+            // TODO: This line of code loads data into the 'opendentalDataSet1.procedurecode' table. You can move, or remove it, as needed.
+            this.procedurecodeTableAdapter1.Fill(this.opendentalDataSet1.procedurecode);
+            // TODO: This line of code loads data into the 'opendentalDataSet.procedurecode' table. You can move, or remove it, as needed.
+            this.procedurecodeTableAdapter.Fill(this.opendentalDataSet.procedurecode);
             if (!PrefC.GetBool(PrefName.DockPhonePanelShow))
             {
                 labelCountry.Visible = false;
@@ -833,7 +837,7 @@ namespace OpenDental
             {
                 FillGrid(limit);//in case data was entered while thread was running.
             }
-            gridMain.SetSelected(0, true);
+           gridMain.SetSelected(0, true);
             for (int i = 0; i < PtDataTable.Rows.Count; i++)
             {
                 if (PIn.Long(PtDataTable.Rows[i][0].ToString()) == InitialPatNum)
@@ -857,6 +861,7 @@ namespace OpenDental
             {
                 DentalTek.PlaceCall(gridCellCur.Text);
             }
+
         }
 
         private void OnArrowsUpDown(System.Windows.Forms.KeyEventArgs e)
@@ -887,7 +892,9 @@ namespace OpenDental
             }
             //SelectedPatNum=PIn.PInt(PtDataTable.Rows[grid2.CurrentRowIndex][0].ToString());
             SelectedPatNum = PIn.Long(PtDataTable.Rows[gridMain.GetSelectedIndex()][0].ToString());
-            DialogResult = DialogResult.OK;
+            SELECTNAME.Text = "Name: " + PIn.String(PtDataTable.Rows[gridMain.GetSelectedIndex()][2].ToString()) + " " + PIn.String(PtDataTable.Rows[gridMain.GetSelectedIndex()][1].ToString());
+
+
         }
 
         private void butOK_Click(object sender, System.EventArgs e)
@@ -895,31 +902,31 @@ namespace OpenDental
             DataTable tablePats = new DataTable();
             if (DateRangeCheck.Checked == true)
             {
-                if (pnum != Int32.MinValue)
+                if (InitialPatNum != 0)
                 {
                     if (pc != null)
                     {
                         // YYY
-                        tablePats = KPIRecTreatment.GetRecTreatmentYYY(dateStartPick, dateEndPick, pc, pnum);
+                        tablePats = KPIRecTreatment.GetRecTreatmentYYY(dateStartPick.Value, dateEndPick.Value, pc, SelectedPatNum);
                     }
                     else if (pc == null)
                     {
                         // YYN
-                        tablePats = KPIRecTreatment.GetRecTreatmentYYN(dateStartPick, dateEndPick, pnum);
+                        tablePats = KPIRecTreatment.GetRecTreatmentYYN(dateStartPick.Value, dateEndPick.Value, SelectedPatNum);
                     }
 
-                else if (pnum == Int32.MinValue)
+                else if (InitialPatNum == 0)
                     {
                         if (pc != null)
                         {
                             // YNY
-                            tablePats = KPIRecTreatment.GetRecTreatmentYNY(dateStartPick, dateEndPick, pc);
+                            tablePats = KPIRecTreatment.GetRecTreatmentYNY(dateStartPick.Value, dateEndPick.Value, pc);
                         }
 
                         else if (pc == null)
                         {
                             // YNN
-                            tablePats = KPIRecTreatment.GetRecTreatmentYNN(dateStartPick, dateEndPick);
+                            tablePats = KPIRecTreatment.GetRecTreatmentYNN(dateStartPick.Value, dateEndPick.Value);
                         }
                     }
                 }
@@ -928,21 +935,21 @@ namespace OpenDental
 
             else if (DateRangeCheck.Checked == false)
             {
-                if (pnum != Int32.MinValue)
+                if (InitialPatNum != 0)
                 {
                     if (pc != null)
                     {
                         //NYY
-                        tablePats = KPIRecTreatment.GetRecTreatmentNYY(pnum, pc);
+                        tablePats = KPIRecTreatment.GetRecTreatmentNYY(SelectedPatNum, pc);
                     }
 
                     else if (pc == null)
                     {
                         //NYN
-                        tablePats = KPIRecTreatment.GetRecTreatmentNYN(pnum);
+                        tablePats = KPIRecTreatment.GetRecTreatmentNYN(SelectedPatNum);
                     }
                 }
-                else if (pnum == Int32.MinValue)
+                else if (InitialPatNum == 0)
                 {
                     if (pc != null)
                     {
@@ -965,12 +972,35 @@ namespace OpenDental
             ReportComplex report = new ReportComplex(true, false);
             report.ReportName = Lan.g(this, "Types of Treatment Prescribed/Recommended");
             report.AddTitle("Title", Lan.g(this, "Types of Treatment Prescribed/Recommended"));
+
             if (DateRangeCheck.Checked == false)
-            { report.AddSubTitle("No Date Selected", "No Date Range Selected"); }
+            { report.AddSubTitle("No Date Selected", "ALL DATES"); }
+
             else if (DateRangeCheck.Checked == true)
             {
-                report.AddSubTitle("Date", dateStart.SelectionStart.ToShortDateString() + " - " + dateEnd.SelectionStart.ToShortDateString());
+                report.AddSubTitle("Date", SELECTDATE.Text);
+             
             }
+            if (SelectedPatNum != 0)
+            {
+                report.AddSubTitle("Name", SELECTNAME.Text);
+            }
+
+            else if (SelectedPatNum == 0)
+            {
+                report.AddSubTitle("Name", "ALL PATIENTS");
+            }
+
+            if (pc != null)
+            {
+                report.AddSubTitle("ProcedureCode", SELECTPROC.Text);
+            }
+
+            else if (pc == null)
+            {
+                report.AddSubTitle("ProcedureCode", "ALL PROCEDURES");
+            }
+
             QueryObject query;
             query = report.AddQuery(tablePats, "", "", SplitByKind.None, 0);
             query.AddColumn("Date of Service", 100, FieldValueType.String);
@@ -1006,15 +1036,20 @@ namespace OpenDental
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
             // procedure code combobox
         {
-            pc = cmbProc.SelectedItem.ToString();
+            pc = cmbProc.SelectedValue.ToString();
+            SELECTPROC.Text = "Procedure Code: " + cmbProc.SelectedValue.ToString();
         }
 
         private void dateStartPick_ValueChanged(object sender, EventArgs e)
         {
             if (dateEndPick.Value < dateStartPick.Value)
             {
-                DialogResult = DialogResult.Retry;
+                MessageBox.Show("Date End cannot be before Date Start");
 
+            }
+            else
+            {
+                SELECTDATE.Text = "Date Range: " + dateStartPick.Value.ToShortDateString() + " - " + dateEndPick.Value.ToShortDateString();
             }
 
         }
@@ -1023,9 +1058,23 @@ namespace OpenDental
         {
             if (dateEndPick.Value < dateStartPick.Value)
             {
-                DialogResult = DialogResult.Retry;
+                MessageBox.Show("Date End cannot be before Date Start");
 
             }
+            else
+            {
+                SELECTDATE.Text = "Date Range: " + dateStartPick.Value.ToShortDateString() + " - " + dateEndPick.Value.ToShortDateString();
+            }
+        }
+
+        private void label14_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DateRangeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            SELECTDATE.Text = "Date Range: " + dateStartPick.Value.ToShortDateString() + " - " + dateEndPick.Value.ToShortDateString();
         }
     }
 }
