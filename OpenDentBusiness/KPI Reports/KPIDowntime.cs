@@ -24,9 +24,10 @@ namespace OpenDentBusiness {
                 LEFT JOIN provider ON (provider.ProvNum = appointment.ProvNum)
                 CROSS JOIN apptview
                 WHERE EXISTS (	SELECT *
-								FROM procedurelog 
+								FROM procedurelog
+                                LEFT JOIN procedurecode ON (procedurecode.CodeNum = procedurelog.CodeNum)
                                 WHERE procedurelog.AptNum = appointment.AptNum
-								AND procedurelog.CodeNum = 99998 or 99999
+								AND (procedurecode.ProcCode = 99999 OR procedurecode.ProcCode = 99998)
                                 )
                 AND appointment.AptStatus = 5
 				AND appointment.AptDateTime BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @"
