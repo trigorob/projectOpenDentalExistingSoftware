@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
+using Tamir.SharpSsh.java.lang;
 
 namespace OpenDentBusiness
 {
@@ -9,7 +10,7 @@ namespace OpenDentBusiness
     {
 
         ///<summary>If not using clinics then supply an empty list of clinicNums. dateStart and dateEnd can be MinVal/MaxVal to indicate "forever".</summary>
-        public static DataTable GetRecTreatment(DateTime dateStart, DateTime dateEnd, String pc, int pnum)
+        public static DataTable GetRecTreatmentYYY(DateTime dateStart, DateTime dateEnd, String pc, int pnum)
         {
             if (RemotingClient.RemotingRole == RemotingRole.ClientWeb)
             {
@@ -59,7 +60,7 @@ namespace OpenDentBusiness
             return table;
         }
 
-        public static DataTable GetRecTreatmentALLProc(DateTime dateStart, DateTime dateEnd, int pnum)
+        public static DataTable GetRecTreatmentYYN(DateTime dateStart, DateTime dateEnd, int pnum)
         {
             
             DataTable table = new DataTable();
@@ -105,7 +106,7 @@ namespace OpenDentBusiness
             return table;
         }
 
-        public static DataTable GetRecTreatmentALLPat(DateTime dateStart, DateTime dateEnd, String pc)
+        public static DataTable GetRecTreatmentYNY(DateTime dateStart, DateTime dateEnd, String pc)
         {
 
             DataTable table = new DataTable();
@@ -151,7 +152,7 @@ namespace OpenDentBusiness
             return table;
         }
 
-        public static DataTable GetRecTreatmentALL(DateTime dateStart, DateTime dateEnd)
+        public static DataTable GetRecTreatmentYNN(DateTime dateStart, DateTime dateEnd)
         {
 
             DataTable table = new DataTable();
@@ -195,6 +196,187 @@ namespace OpenDentBusiness
             }
             return table;
         }
+
+        public static DataTable GetRecTreatmentNNN()
+        {
+            if (RemotingClient.RemotingRole == RemotingRole.ClientWeb)
+            {
+                return Meth.GetTable(MethodBase.GetCurrentMethod());
+            }
+            DataTable table = new DataTable();
+            table.Columns.Add("Date of Service");
+            table.Columns.Add("Name");
+            table.Columns.Add("Procedure");
+            table.Columns.Add("Priority");
+            table.Columns.Add("Status of Pre-Authorization");
+
+
+            DataRow row;
+            string command = @"
+				SELECT r.ProcDate, p.LName, p.FName, p.MiddleI, rc.ProcCode, tpa.Priority, r.ProcStatus
+                FROM patient p
+                JOIN procedurelog r ON r.PatNum = p.PatNum
+                JOIN treatplan t ON t.PatNum = p.PatNum
+                JOIN treatplanattach tpa ON tpa.ProcNum = r.ProcNum AND tpa.TreatPlanNum = t.TreatPlanNum
+                JOIN procedurecode rc ON rc.CodeNum = r.CodeNum
+                ORDER BY r.ProcDate";
+
+            DataTable raw = ReportsComplex.GetTable(command);
+            Patient pat;
+            for (int i = 0; i < raw.Rows.Count; i++)
+            {
+                row = table.NewRow();
+                pat = new Patient();
+                pat.LName = raw.Rows[i]["LName"].ToString();
+                pat.FName = raw.Rows[i]["FName"].ToString();
+                pat.MiddleI = raw.Rows[i]["MiddleI"].ToString();
+                pat.Preferred = raw.Rows[i]["Preferred"].ToString();
+                row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
+                row["Name"] = pat.GetNameLF();
+                row["Procedure"] = raw.Rows[i]["ProcCode"].ToString();
+                row["Priority"] = raw.Rows[i]["Priority"].ToString();
+                row["Status of Pre-Authorization"] = raw.Rows[i]["ProcStatus"];
+                table.Rows.Add(row);
+            }
+            return table;
+        }
+        // finish these queries.
+        public static DataTable GetRecTreatmentNYY(int pnum, String pc)
+        {
+            if (RemotingClient.RemotingRole == RemotingRole.ClientWeb)
+            {
+                return Meth.GetTable(MethodBase.GetCurrentMethod());
+            }
+            DataTable table = new DataTable();
+            table.Columns.Add("Date of Service");
+            table.Columns.Add("Name");
+            table.Columns.Add("Procedure");
+            table.Columns.Add("Priority");
+            table.Columns.Add("Status of Pre-Authorization");
+
+
+            DataRow row;
+            string command = @"
+				SELECT r.ProcDate, p.LName, p.FName, p.MiddleI, rc.ProcCode, tpa.Priority, r.ProcStatus
+                FROM patient p
+                JOIN procedurelog r ON r.PatNum = p.PatNum
+                JOIN treatplan t ON t.PatNum = p.PatNum
+                JOIN treatplanattach tpa ON tpa.ProcNum = r.ProcNum AND tpa.TreatPlanNum = t.TreatPlanNum
+                JOIN procedurecode rc ON rc.CodeNum = r.CodeNum
+                WHERE rc.ProcCode = " + POut.String(pc) + @" AND p.PatNum = " + POut.Int(pnum) + @"
+                ORDER BY r.ProcDate";
+
+            DataTable raw = ReportsComplex.GetTable(command);
+            Patient pat;
+            for (int i = 0; i < raw.Rows.Count; i++)
+            {
+                row = table.NewRow();
+                pat = new Patient();
+                pat.LName = raw.Rows[i]["LName"].ToString();
+                pat.FName = raw.Rows[i]["FName"].ToString();
+                pat.MiddleI = raw.Rows[i]["MiddleI"].ToString();
+                pat.Preferred = raw.Rows[i]["Preferred"].ToString();
+                row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
+                row["Name"] = pat.GetNameLF();
+                row["Procedure"] = raw.Rows[i]["ProcCode"].ToString();
+                row["Priority"] = raw.Rows[i]["Priority"].ToString();
+                row["Status of Pre-Authorization"] = raw.Rows[i]["ProcStatus"];
+                table.Rows.Add(row);
+            }
+            return table;
+        }
+
+        public static DataTable GetRecTreatmentNYN(int pnum)
+        {
+            if (RemotingClient.RemotingRole == RemotingRole.ClientWeb)
+            {
+                return Meth.GetTable(MethodBase.GetCurrentMethod());
+            }
+            DataTable table = new DataTable();
+            table.Columns.Add("Date of Service");
+            table.Columns.Add("Name");
+            table.Columns.Add("Procedure");
+            table.Columns.Add("Priority");
+            table.Columns.Add("Status of Pre-Authorization");
+
+
+            DataRow row;
+            string command = @"
+				SELECT r.ProcDate, p.LName, p.FName, p.MiddleI, rc.ProcCode, tpa.Priority, r.ProcStatus
+                FROM patient p
+                JOIN procedurelog r ON r.PatNum = p.PatNum
+                JOIN treatplan t ON t.PatNum = p.PatNum
+                JOIN treatplanattach tpa ON tpa.ProcNum = r.ProcNum AND tpa.TreatPlanNum = t.TreatPlanNum
+                JOIN procedurecode rc ON rc.CodeNum = r.CodeNum
+                WHERE p.PatNum = " + POut.Int(pnum) + @"
+                ORDER BY r.ProcDate";
+
+            DataTable raw = ReportsComplex.GetTable(command);
+            Patient pat;
+            for (int i = 0; i < raw.Rows.Count; i++)
+            {
+                row = table.NewRow();
+                pat = new Patient();
+                pat.LName = raw.Rows[i]["LName"].ToString();
+                pat.FName = raw.Rows[i]["FName"].ToString();
+                pat.MiddleI = raw.Rows[i]["MiddleI"].ToString();
+                pat.Preferred = raw.Rows[i]["Preferred"].ToString();
+                row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
+                row["Name"] = pat.GetNameLF();
+                row["Procedure"] = raw.Rows[i]["ProcCode"].ToString();
+                row["Priority"] = raw.Rows[i]["Priority"].ToString();
+                row["Status of Pre-Authorization"] = raw.Rows[i]["ProcStatus"];
+                table.Rows.Add(row);
+            }
+            return table;
+        }
+
+        public static DataTable GetRecTreatmentNNY(String pc)
+        {
+            if (RemotingClient.RemotingRole == RemotingRole.ClientWeb)
+            {
+                return Meth.GetTable(MethodBase.GetCurrentMethod());
+            }
+            DataTable table = new DataTable();
+            table.Columns.Add("Date of Service");
+            table.Columns.Add("Name");
+            table.Columns.Add("Procedure");
+            table.Columns.Add("Priority");
+            table.Columns.Add("Status of Pre-Authorization");
+
+
+            DataRow row;
+            string command = @"
+				SELECT r.ProcDate, p.LName, p.FName, p.MiddleI, rc.ProcCode, tpa.Priority, r.ProcStatus
+                FROM patient p
+                JOIN procedurelog r ON r.PatNum = p.PatNum
+                JOIN treatplan t ON t.PatNum = p.PatNum
+                JOIN treatplanattach tpa ON tpa.ProcNum = r.ProcNum AND tpa.TreatPlanNum = t.TreatPlanNum
+                JOIN procedurecode rc ON rc.CodeNum = r.CodeNum
+                WHERE rc.ProcCode = " + POut.String(pc) + @"
+                ORDER BY r.ProcDate";
+
+            DataTable raw = ReportsComplex.GetTable(command);
+            Patient pat;
+            for (int i = 0; i < raw.Rows.Count; i++)
+            {
+                row = table.NewRow();
+                pat = new Patient();
+                pat.LName = raw.Rows[i]["LName"].ToString();
+                pat.FName = raw.Rows[i]["FName"].ToString();
+                pat.MiddleI = raw.Rows[i]["MiddleI"].ToString();
+                pat.Preferred = raw.Rows[i]["Preferred"].ToString();
+                row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
+                row["Name"] = pat.GetNameLF();
+                row["Procedure"] = raw.Rows[i]["ProcCode"].ToString();
+                row["Priority"] = raw.Rows[i]["Priority"].ToString();
+                row["Status of Pre-Authorization"] = raw.Rows[i]["ProcStatus"];
+                table.Rows.Add(row);
+            }
+            return table;
+        }
+
+       
 
     }
 }

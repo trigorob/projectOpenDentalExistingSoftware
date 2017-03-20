@@ -2,6 +2,7 @@
 {
     public partial class FormKPIRecTreatment
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -26,16 +27,124 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRpActivePatients));
+            this.textLName = new System.Windows.Forms.TextBox();
+            this.LNameLabel = new System.Windows.Forms.Label();
+            this.groupAddPt = new System.Windows.Forms.GroupBox();
+            this.butAddAll = new OpenDental.UI.Button();
+            this.butAddPt = new OpenDental.UI.Button();
             this.butOK = new OpenDental.UI.Button();
             this.butCancel = new OpenDental.UI.Button();
-            this.dateEnd = new System.Windows.Forms.MonthCalendar();
-            this.dateStart = new System.Windows.Forms.MonthCalendar();
-            this.labelTO = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.DateRangeCheck = new System.Windows.Forms.CheckBox();
+            this.NoteLabel = new System.Windows.Forms.Label();
+            this.DateEndLabel = new System.Windows.Forms.Label();
+            this.DateStartLabel = new System.Windows.Forms.Label();
+            this.dateEndPick = new System.Windows.Forms.DateTimePicker();
+            this.dateStartPick = new System.Windows.Forms.DateTimePicker();
+            this.ProcCodeLabel = new System.Windows.Forms.Label();
+            this.cmbProc = new System.Windows.Forms.ComboBox();
+            this.textRegKey = new System.Windows.Forms.TextBox();
+            this.comboClinic = new System.Windows.Forms.ComboBox();
+            this.labelClinic = new System.Windows.Forms.Label();
+            this.textCountry = new System.Windows.Forms.TextBox();
+            this.labelCountry = new System.Windows.Forms.Label();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.textSubscriberID = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboSite = new System.Windows.Forms.ComboBox();
+            this.labelSite = new System.Windows.Forms.Label();
+            this.comboBillingType = new System.Windows.Forms.ComboBox();
+            this.textBirthdate = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkShowArchived = new System.Windows.Forms.CheckBox();
+            this.textChartNumber = new System.Windows.Forms.TextBox();
+            this.textSSN = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textPatNum = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textState = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textCity = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkGuarantors = new System.Windows.Forms.CheckBox();
+            this.checkHideInactive = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textAddress = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textHmPhone = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textFName = new System.Windows.Forms.TextBox();
+            this.FNameLabel = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkRefresh = new System.Windows.Forms.CheckBox();
+            this.butSearch = new OpenDental.UI.Button();
+            this.gridMain = new OpenDental.UI.ODGrid();
+            this.contrKeyboard1 = new OpenDental.User_Controls.ContrKeyboard();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // textLName
+            // 
+            this.textLName.Location = new System.Drawing.Point(133, 36);
+            this.textLName.Name = "textLName";
+            this.textLName.Size = new System.Drawing.Size(178, 20);
+            this.textLName.TabIndex = 0;
+            this.textLName.TextChanged += new System.EventHandler(this.textLName_TextChanged);
+            this.textLName.Enter += new System.EventHandler(this.textBox_Enter);
+            this.textLName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textLName_KeyDown);
+            this.textLName.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // LNameLabel
+            // 
+            this.LNameLabel.Location = new System.Drawing.Point(24, 38);
+            this.LNameLabel.Name = "LNameLabel";
+            this.LNameLabel.Size = new System.Drawing.Size(76, 17);
+            this.LNameLabel.TabIndex = 3;
+            this.LNameLabel.Text = "Last Name";
+            this.LNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupAddPt
+            // 
+            this.groupAddPt.Location = new System.Drawing.Point(0, 0);
+            this.groupAddPt.Name = "groupAddPt";
+            this.groupAddPt.Size = new System.Drawing.Size(200, 100);
+            this.groupAddPt.TabIndex = 22;
+            this.groupAddPt.TabStop = false;
+            // 
+            // butAddAll
+            // 
+            this.butAddAll.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.butAddAll.Autosize = true;
+            this.butAddAll.BtnShape = OpenDental.UI.enumType.BtnShape.Rectangle;
+            this.butAddAll.BtnStyle = OpenDental.UI.enumType.XPStyle.Silver;
+            this.butAddAll.CornerRadius = 4F;
+            this.butAddAll.Location = new System.Drawing.Point(0, 0);
+            this.butAddAll.Name = "butAddAll";
+            this.butAddAll.Size = new System.Drawing.Size(75, 23);
+            this.butAddAll.TabIndex = 0;
+            // 
+            // butAddPt
+            // 
+            this.butAddPt.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.butAddPt.Autosize = true;
+            this.butAddPt.BtnShape = OpenDental.UI.enumType.BtnShape.Rectangle;
+            this.butAddPt.BtnStyle = OpenDental.UI.enumType.XPStyle.Silver;
+            this.butAddPt.CornerRadius = 4F;
+            this.butAddPt.Location = new System.Drawing.Point(0, 0);
+            this.butAddPt.Name = "butAddPt";
+            this.butAddPt.Size = new System.Drawing.Size(75, 23);
+            this.butAddPt.TabIndex = 0;
             // 
             // butOK
             // 
@@ -45,10 +154,10 @@
             this.butOK.BtnShape = OpenDental.UI.enumType.BtnShape.Rectangle;
             this.butOK.BtnStyle = OpenDental.UI.enumType.XPStyle.Silver;
             this.butOK.CornerRadius = 4F;
-            this.butOK.Location = new System.Drawing.Point(349, 454);
+            this.butOK.Location = new System.Drawing.Point(613, 427);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(75, 24);
-            this.butOK.TabIndex = 3;
+            this.butOK.Size = new System.Drawing.Size(76, 26);
+            this.butOK.TabIndex = 20;
             this.butOK.Text = "&OK";
             this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
@@ -60,71 +169,499 @@
             this.butCancel.BtnShape = OpenDental.UI.enumType.BtnShape.Rectangle;
             this.butCancel.BtnStyle = OpenDental.UI.enumType.XPStyle.Silver;
             this.butCancel.CornerRadius = 4F;
-            this.butCancel.Location = new System.Drawing.Point(430, 454);
+            this.butCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.butCancel.Location = new System.Drawing.Point(741, 427);
             this.butCancel.Name = "butCancel";
-            this.butCancel.Size = new System.Drawing.Size(75, 24);
-            this.butCancel.TabIndex = 2;
+            this.butCancel.Size = new System.Drawing.Size(76, 26);
+            this.butCancel.TabIndex = 21;
             this.butCancel.Text = "&Cancel";
             this.butCancel.Click += new System.EventHandler(this.butCancel_Click);
             // 
-            // dateEnd
+            // groupBox2
             // 
-            this.dateEnd.Location = new System.Drawing.Point(277, 32);
-            this.dateEnd.Name = "dateEnd";
-            this.dateEnd.TabIndex = 57;
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.DateRangeCheck);
+            this.groupBox2.Controls.Add(this.NoteLabel);
+            this.groupBox2.Controls.Add(this.DateEndLabel);
+            this.groupBox2.Controls.Add(this.DateStartLabel);
+            this.groupBox2.Controls.Add(this.dateEndPick);
+            this.groupBox2.Controls.Add(this.dateStartPick);
+            this.groupBox2.Controls.Add(this.ProcCodeLabel);
+            this.groupBox2.Controls.Add(this.cmbProc);
+            this.groupBox2.Controls.Add(this.textRegKey);
+            this.groupBox2.Controls.Add(this.comboClinic);
+            this.groupBox2.Controls.Add(this.labelClinic);
+            this.groupBox2.Controls.Add(this.textCountry);
+            this.groupBox2.Controls.Add(this.labelCountry);
+            this.groupBox2.Controls.Add(this.textEmail);
+            this.groupBox2.Controls.Add(this.labelEmail);
+            this.groupBox2.Controls.Add(this.textSubscriberID);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.comboSite);
+            this.groupBox2.Controls.Add(this.labelSite);
+            this.groupBox2.Controls.Add(this.comboBillingType);
+            this.groupBox2.Controls.Add(this.textBirthdate);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.checkShowArchived);
+            this.groupBox2.Controls.Add(this.textChartNumber);
+            this.groupBox2.Controls.Add(this.textSSN);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.textPatNum);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.textState);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.textCity);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.checkGuarantors);
+            this.groupBox2.Controls.Add(this.checkHideInactive);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.textAddress);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.textHmPhone);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.textFName);
+            this.groupBox2.Controls.Add(this.FNameLabel);
+            this.groupBox2.Controls.Add(this.textLName);
+            this.groupBox2.Controls.Add(this.LNameLabel);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox2.Location = new System.Drawing.Point(559, 102);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(323, 215);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Search by:";
             // 
-            // dateStart
+            // DateRangeCheck
             // 
-            this.dateStart.Location = new System.Drawing.Point(12, 32);
-            this.dateStart.Name = "dateStart";
-            this.dateStart.TabIndex = 56;
+            this.DateRangeCheck.AutoSize = true;
+            this.DateRangeCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DateRangeCheck.Location = new System.Drawing.Point(27, 115);
+            this.DateRangeCheck.Name = "DateRangeCheck";
+            this.DateRangeCheck.Size = new System.Drawing.Size(106, 17);
+            this.DateRangeCheck.TabIndex = 87;
+            this.DateRangeCheck.Text = "Use Date Range";
+            this.DateRangeCheck.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.DateRangeCheck.UseVisualStyleBackColor = true;
             // 
-            // labelTO
+            // NoteLabel
             // 
-            this.labelTO.Location = new System.Drawing.Point(193, 40);
-            this.labelTO.Name = "labelTO";
-            this.labelTO.Size = new System.Drawing.Size(72, 23);
-            this.labelTO.TabIndex = 58;
-            this.labelTO.Text = "TO";
-            this.labelTO.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.NoteLabel.AutoSize = true;
+            this.NoteLabel.Location = new System.Drawing.Point(51, 189);
+            this.NoteLabel.Name = "NoteLabel";
+            this.NoteLabel.Size = new System.Drawing.Size(230, 13);
+            this.NoteLabel.TabIndex = 86;
+            this.NoteLabel.Text = "Note: Fields left blank will be interpreted as ALL";
             // 
-            // label3
+            // DateEndLabel
             // 
-            this.label3.Location = new System.Drawing.Point(12, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(492, 16);
-            this.label3.TabIndex = 72;
-            this.label3.Text = "Used to get a list of all patients on active recall within the" +
-    " date range.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.DateEndLabel.AutoSize = true;
+            this.DateEndLabel.Location = new System.Drawing.Point(24, 167);
+            this.DateEndLabel.Name = "DateEndLabel";
+            this.DateEndLabel.Size = new System.Drawing.Size(52, 13);
+            this.DateEndLabel.TabIndex = 23;
+            this.DateEndLabel.Text = "Date End";
             // 
-            // FormKPIActiveRecall
+            // DateStartLabel
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(517, 490);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateEnd);
-            this.Controls.Add(this.dateStart);
-            this.Controls.Add(this.labelTO);
+            this.DateStartLabel.AutoSize = true;
+            this.DateStartLabel.Location = new System.Drawing.Point(24, 140);
+            this.DateStartLabel.Name = "DateStartLabel";
+            this.DateStartLabel.Size = new System.Drawing.Size(55, 13);
+            this.DateStartLabel.TabIndex = 85;
+            this.DateStartLabel.Text = "Date Start";
+            this.DateStartLabel.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // dateEndPick
+            // 
+            this.dateEndPick.Location = new System.Drawing.Point(133, 163);
+            this.dateEndPick.Name = "dateEndPick";
+            this.dateEndPick.Size = new System.Drawing.Size(178, 20);
+            this.dateEndPick.TabIndex = 84;
+            this.dateEndPick.ValueChanged += new System.EventHandler(this.dateEndPick_ValueChanged);
+            // 
+            // dateStartPick
+            // 
+            this.dateStartPick.Location = new System.Drawing.Point(133, 137);
+            this.dateStartPick.Name = "dateStartPick";
+            this.dateStartPick.Size = new System.Drawing.Size(178, 20);
+            this.dateStartPick.TabIndex = 83;
+            this.dateStartPick.ValueChanged += new System.EventHandler(this.dateStartPick_ValueChanged);
+            // 
+            // ProcCodeLabel
+            // 
+            this.ProcCodeLabel.AutoSize = true;
+            this.ProcCodeLabel.Location = new System.Drawing.Point(24, 93);
+            this.ProcCodeLabel.Name = "ProcCodeLabel";
+            this.ProcCodeLabel.Size = new System.Drawing.Size(84, 13);
+            this.ProcCodeLabel.TabIndex = 82;
+            this.ProcCodeLabel.Text = "Procedure Code";
+            this.ProcCodeLabel.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // cmbProc
+            // 
+            this.cmbProc.FormattingEnabled = true;
+            this.cmbProc.Location = new System.Drawing.Point(133, 88);
+            this.cmbProc.Name = "cmbProc";
+            this.cmbProc.Size = new System.Drawing.Size(178, 21);
+            this.cmbProc.TabIndex = 81;
+            this.cmbProc.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textRegKey
+            // 
+            this.textRegKey.Location = new System.Drawing.Point(0, 0);
+            this.textRegKey.Name = "textRegKey";
+            this.textRegKey.Size = new System.Drawing.Size(90, 20);
+            this.textRegKey.TabIndex = 49;
+            this.textRegKey.Visible = false;
+            this.textRegKey.TextChanged += new System.EventHandler(this.textRegKey_TextChanged);
+            // 
+            // comboClinic
+            // 
+            this.comboClinic.Location = new System.Drawing.Point(0, 0);
+            this.comboClinic.Name = "comboClinic";
+            this.comboClinic.Size = new System.Drawing.Size(121, 21);
+            this.comboClinic.TabIndex = 51;
+            // 
+            // labelClinic
+            // 
+            this.labelClinic.Location = new System.Drawing.Point(0, 0);
+            this.labelClinic.Name = "labelClinic";
+            this.labelClinic.Size = new System.Drawing.Size(100, 23);
+            this.labelClinic.TabIndex = 52;
+            // 
+            // textCountry
+            // 
+            this.textCountry.Location = new System.Drawing.Point(0, 0);
+            this.textCountry.Name = "textCountry";
+            this.textCountry.Size = new System.Drawing.Size(100, 20);
+            this.textCountry.TabIndex = 53;
+            // 
+            // labelCountry
+            // 
+            this.labelCountry.Location = new System.Drawing.Point(0, 0);
+            this.labelCountry.Name = "labelCountry";
+            this.labelCountry.Size = new System.Drawing.Size(100, 23);
+            this.labelCountry.TabIndex = 54;
+            // 
+            // textEmail
+            // 
+            this.textEmail.Location = new System.Drawing.Point(0, 0);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(100, 20);
+            this.textEmail.TabIndex = 53;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.Location = new System.Drawing.Point(0, 0);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(100, 23);
+            this.labelEmail.TabIndex = 54;
+            // 
+            // textSubscriberID
+            // 
+            this.textSubscriberID.Location = new System.Drawing.Point(0, 0);
+            this.textSubscriberID.Name = "textSubscriberID";
+            this.textSubscriberID.Size = new System.Drawing.Size(100, 20);
+            this.textSubscriberID.TabIndex = 55;
+            // 
+            // label13
+            // 
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(100, 23);
+            this.label13.TabIndex = 56;
+            // 
+            // comboSite
+            // 
+            this.comboSite.Location = new System.Drawing.Point(0, 0);
+            this.comboSite.Name = "comboSite";
+            this.comboSite.Size = new System.Drawing.Size(121, 21);
+            this.comboSite.TabIndex = 57;
+            // 
+            // labelSite
+            // 
+            this.labelSite.Location = new System.Drawing.Point(0, 0);
+            this.labelSite.Name = "labelSite";
+            this.labelSite.Size = new System.Drawing.Size(100, 23);
+            this.labelSite.TabIndex = 58;
+            // 
+            // comboBillingType
+            // 
+            this.comboBillingType.Location = new System.Drawing.Point(0, 0);
+            this.comboBillingType.Name = "comboBillingType";
+            this.comboBillingType.Size = new System.Drawing.Size(121, 21);
+            this.comboBillingType.TabIndex = 59;
+            // 
+            // textBirthdate
+            // 
+            this.textBirthdate.Location = new System.Drawing.Point(0, 0);
+            this.textBirthdate.Name = "textBirthdate";
+            this.textBirthdate.Size = new System.Drawing.Size(100, 20);
+            this.textBirthdate.TabIndex = 60;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 61;
+            // 
+            // checkShowArchived
+            // 
+            this.checkShowArchived.Location = new System.Drawing.Point(0, 0);
+            this.checkShowArchived.Name = "checkShowArchived";
+            this.checkShowArchived.Size = new System.Drawing.Size(104, 24);
+            this.checkShowArchived.TabIndex = 62;
+            // 
+            // textChartNumber
+            // 
+            this.textChartNumber.Location = new System.Drawing.Point(0, 0);
+            this.textChartNumber.Name = "textChartNumber";
+            this.textChartNumber.Size = new System.Drawing.Size(100, 20);
+            this.textChartNumber.TabIndex = 63;
+            // 
+            // textSSN
+            // 
+            this.textSSN.Location = new System.Drawing.Point(0, 0);
+            this.textSSN.Name = "textSSN";
+            this.textSSN.Size = new System.Drawing.Size(100, 20);
+            this.textSSN.TabIndex = 64;
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(100, 23);
+            this.label12.TabIndex = 65;
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 23);
+            this.label11.TabIndex = 66;
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 23);
+            this.label10.TabIndex = 67;
+            // 
+            // textPatNum
+            // 
+            this.textPatNum.Location = new System.Drawing.Point(0, 0);
+            this.textPatNum.Name = "textPatNum";
+            this.textPatNum.Size = new System.Drawing.Size(100, 20);
+            this.textPatNum.TabIndex = 68;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(0, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(100, 23);
+            this.label9.TabIndex = 69;
+            // 
+            // textState
+            // 
+            this.textState.Location = new System.Drawing.Point(0, 0);
+            this.textState.Name = "textState";
+            this.textState.Size = new System.Drawing.Size(100, 20);
+            this.textState.TabIndex = 70;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 23);
+            this.label8.TabIndex = 71;
+            // 
+            // textCity
+            // 
+            this.textCity.Location = new System.Drawing.Point(0, 0);
+            this.textCity.Name = "textCity";
+            this.textCity.Size = new System.Drawing.Size(100, 20);
+            this.textCity.TabIndex = 72;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 23);
+            this.label7.TabIndex = 73;
+            // 
+            // checkGuarantors
+            // 
+            this.checkGuarantors.Location = new System.Drawing.Point(0, 0);
+            this.checkGuarantors.Name = "checkGuarantors";
+            this.checkGuarantors.Size = new System.Drawing.Size(104, 24);
+            this.checkGuarantors.TabIndex = 74;
+            // 
+            // checkHideInactive
+            // 
+            this.checkHideInactive.Location = new System.Drawing.Point(0, 0);
+            this.checkHideInactive.Name = "checkHideInactive";
+            this.checkHideInactive.Size = new System.Drawing.Size(104, 24);
+            this.checkHideInactive.TabIndex = 75;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.TabIndex = 76;
+            // 
+            // textAddress
+            // 
+            this.textAddress.Location = new System.Drawing.Point(0, 0);
+            this.textAddress.Name = "textAddress";
+            this.textAddress.Size = new System.Drawing.Size(100, 20);
+            this.textAddress.TabIndex = 77;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.TabIndex = 78;
+            // 
+            // textHmPhone
+            // 
+            this.textHmPhone.Location = new System.Drawing.Point(0, 0);
+            this.textHmPhone.Name = "textHmPhone";
+            this.textHmPhone.Size = new System.Drawing.Size(100, 20);
+            this.textHmPhone.TabIndex = 79;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 80;
+            // 
+            // textFName
+            // 
+            this.textFName.Location = new System.Drawing.Point(133, 62);
+            this.textFName.Name = "textFName";
+            this.textFName.Size = new System.Drawing.Size(178, 20);
+            this.textFName.TabIndex = 1;
+            this.textFName.TextChanged += new System.EventHandler(this.textFName_TextChanged);
+            this.textFName.Enter += new System.EventHandler(this.textBox_Enter);
+            this.textFName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textFName_KeyDown);
+            // 
+            // FNameLabel
+            // 
+            this.FNameLabel.Location = new System.Drawing.Point(24, 63);
+            this.FNameLabel.Name = "FNameLabel";
+            this.FNameLabel.Size = new System.Drawing.Size(76, 16);
+            this.FNameLabel.TabIndex = 5;
+            this.FNameLabel.Text = "First Name";
+            this.FNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.checkRefresh);
+            this.groupBox1.Controls.Add(this.butSearch);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox1.Location = new System.Drawing.Point(562, 323);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(162, 70);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Search";
+            // 
+            // checkRefresh
+            // 
+            this.checkRefresh.Location = new System.Drawing.Point(11, 45);
+            this.checkRefresh.Name = "checkRefresh";
+            this.checkRefresh.Size = new System.Drawing.Size(145, 19);
+            this.checkRefresh.TabIndex = 72;
+            this.checkRefresh.Text = "Refresh while typing";
+            this.checkRefresh.UseVisualStyleBackColor = true;
+            this.checkRefresh.Click += new System.EventHandler(this.checkRefresh_Click);
+            // 
+            // butSearch
+            // 
+            this.butSearch.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.butSearch.Autosize = true;
+            this.butSearch.BtnShape = OpenDental.UI.enumType.BtnShape.Rectangle;
+            this.butSearch.BtnStyle = OpenDental.UI.enumType.XPStyle.Silver;
+            this.butSearch.CornerRadius = 4F;
+            this.butSearch.Location = new System.Drawing.Point(33, 19);
+            this.butSearch.Name = "butSearch";
+            this.butSearch.Size = new System.Drawing.Size(75, 23);
+            this.butSearch.TabIndex = 33;
+            this.butSearch.Text = "&Search";
+            this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
+            // 
+            // gridMain
+            // 
+            this.gridMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridMain.HasAddButton = false;
+            this.gridMain.HasMultilineHeaders = false;
+            this.gridMain.HeaderHeight = 15;
+            this.gridMain.HScrollVisible = true;
+            this.gridMain.Location = new System.Drawing.Point(3, 2);
+            this.gridMain.Name = "gridMain";
+            this.gridMain.ScrollValue = 0;
+            this.gridMain.Size = new System.Drawing.Size(550, 470);
+            this.gridMain.TabIndex = 9;
+            this.gridMain.Title = "Select Patient";
+            this.gridMain.TitleHeight = 18;
+            this.gridMain.TranslationName = "FormKPIRecTreatment";
+            this.gridMain.WrapText = false;
+            this.gridMain.CellDoubleClick += new OpenDental.UI.ODGridClickEventHandler(this.gridMain_CellDoubleClick);
+            this.gridMain.CellClick += new OpenDental.UI.ODGridClickEventHandler(this.gridMain_CellClick);
+            this.gridMain.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridMain_KeyDown);
+            // 
+            // contrKeyboard1
+            // 
+            this.contrKeyboard1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.contrKeyboard1.Location = new System.Drawing.Point(559, 0);
+            this.contrKeyboard1.Name = "contrKeyboard1";
+            this.contrKeyboard1.Size = new System.Drawing.Size(323, 100);
+            this.contrKeyboard1.TabIndex = 10;
+            this.contrKeyboard1.KeyClick += new OpenDental.User_Controls.KeyboardClickEventHandler(this.contrKeyboard1_KeyClick);
+            this.contrKeyboard1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.contrKeyboard1_MouseDown);
+            // 
+            // FormKPIRecTreatment
+            // 
+            this.AcceptButton = this.butOK;
+            this.CancelButton = this.butCancel;
+            this.ClientSize = new System.Drawing.Size(882, 479);
+            this.Controls.Add(this.contrKeyboard1);
             this.Controls.Add(this.butOK);
+            this.Controls.Add(this.gridMain);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.butCancel);
-            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon"))); TODOKPI
-            this.MinimumSize = new System.Drawing.Size(533, 528);
-            this.Name = "FormKPIActiveRecall";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Patients on Active Recall";
-            this.Load += new System.EventHandler(this.FormKPIRecTreatment_Load);
+            this.Controls.Add(this.groupAddPt);
+            this.Name = "FormKPIRecTreatment";
+            this.ShowInTaskbar = false;
+            this.Text = "Treatments Recommended/Prescribed";
+            this.Load += new System.EventHandler(this.FormSelectPatient_Load);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
-
         #endregion
 
-        private OpenDental.UI.Button butOK;
-        private OpenDental.UI.Button butCancel;
-        private System.Windows.Forms.MonthCalendar dateEnd;
-        private System.Windows.Forms.MonthCalendar dateStart;
         private System.Windows.Forms.Label labelTO;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ProcCodeLabel;
+        private System.Windows.Forms.ComboBox cmbProc;
+        private System.Windows.Forms.DateTimePicker dateEndPick;
+        private System.Windows.Forms.DateTimePicker dateStartPick;
+        private System.Windows.Forms.Label DateEndLabel;
+        private System.Windows.Forms.Label DateStartLabel;
+        private System.Windows.Forms.Label NoteLabel;
+        private System.Windows.Forms.CheckBox DateRangeCheck;
     }
 }
+#endregion
