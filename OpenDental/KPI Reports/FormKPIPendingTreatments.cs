@@ -31,16 +31,25 @@ namespace OpenDental.KPI_Reports
             ReportComplex report = new ReportComplex(true, false);
             report.ReportName = Lan.g(this, "Pending Treatments");
             report.AddTitle("Title", Lan.g(this, "Pending Treatments"));
-            report.AddSubTitle("Date", dateStart.SelectionStart.ToShortDateString() + " - " + dateEnd.SelectionStart.ToShortDateString());
+            // report.AddSubTitle("Date", dateStart.SelectionStart.ToShortDateString() + " - " + dateEnd.SelectionStart.ToShortDateString());
             QueryObject query;
             query = report.AddQuery(tablePats, "", "", SplitByKind.None, 0);
+            // query.AddColumn("PatNum", 90, FieldValueType.Number);
             query.AddColumn("Name", 150, FieldValueType.String);
-            query.AddColumn("Birthdate", 80, FieldValueType.String);
-            query.AddColumn("Sex", 150, FieldValueType.String);
-            query.AddColumn("Postal Code", 90, FieldValueType.String);
-            query.AddColumn("Date of Service", 100, FieldValueType.String);
-            query.AddColumn("Primary Provider", 40, FieldValueType.String);
-            query.AddGroupSummaryField("Patient Count:", "Name", "Provider", SummaryOperation.Count);
+            query.AddColumn("Home Phone", 50, FieldValueType.String);
+            query.AddColumn("Work Phone", 50, FieldValueType.String);
+            query.AddColumn("Wireless Phone", 70, FieldValueType.String);
+            query.AddColumn("Email", 100, FieldValueType.String);
+
+            query.AddColumn("Procedure Code", 40, FieldValueType.String);
+            query.AddColumn("Description", 250, FieldValueType.String);
+
+            // query.AddColumn("Birthdate", 80, FieldValueType.String);
+            // query.AddColumn("Sex", 150, FieldValueType.String);
+            // query.AddColumn("Postal Code", 90, FieldValueType.String);
+            // query.AddColumn("Date of Service", 100, FieldValueType.String);
+            // query.AddColumn("Primary Provider", 40, FieldValueType.String);
+            // query.AddGroupSummaryField("Patient Count:", "Name", "Provider", SummaryOperation.Count);
             report.AddPageNum();
             if (!report.SubmitQueries())
             {

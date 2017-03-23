@@ -16,12 +16,14 @@ namespace OpenDentBusiness {
             }
             DataTable table = new DataTable();
             table.Columns.Add("Name");
-            table.Columns.Add("Sex");
-            table.Columns.Add("Age");
-            table.Columns.Add("Postal Code");
-            table.Columns.Add("Date of Service");
-            table.Columns.Add("Primary Provider");
-            table.Columns.Add("Appointment Description");
+            table.Columns.Add("Home Phone");
+            table.Columns.Add("Work Phone");
+            table.Columns.Add("Wireless Phone");
+            table.Columns.Add("Email");
+            table.Columns.Add("Procedure Code");
+            table.Columns.Add("Description");
+
+
             DataRow row;
             /*
             13.Pending treatment(patients waiting for appointment)
@@ -38,7 +40,26 @@ namespace OpenDentBusiness {
             */
 
             string command = @"
-				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, r.AptDateTime, p.Birthdate, r.ProcDescript 
+				SELECT p.PatNum, p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, 
+           p.HmPhone, p.WkPhone, p.WirelessPhone, p.Email, pc.Descript, pc.ProcCode 
+FROM plannedappt pla
+JOIN appointment a ON a.AptNum = pla.AptNum
+JOIN patient p ON a.PatNum = p.PatNum
+JOIN procedurelog pl ON pl.PlannedAptNum = pla.AptNum
+JOIN procedurecode pc ON pc.CodeNum = pl.CodeNum
+WHERE pc.ProcCode != 01202
+";
+
+            /*
+             FROM opendental.plannedappt pla
+JOIN opendental.appointment a ON a.AptNum = pla.AptNum
+JOIN opendental.patient p ON a.PatNum = p.PatNum 
+JOIN opendental.procedurelog pl ON pl.PlannedAptNum = pla.AptNum
+JOIN opendental.procedurecode pc ON pc.CodeNum = pl.CodeNum
+WHERE pc.ProcCode != 01202
+
+              
+              SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, r.AptDateTime, p.Birthdate, r.ProcDescript 
 FROM patient p 
 JOIN appointment r ON r.PatNum = p.PatNum 
 WHERE r.AptDateTime = (
@@ -47,7 +68,7 @@ WHERE r.AptDateTime = (
 	WHERE r.PatNum = r2.PatNum 
 		AND r2.AptStatus = '3'
 		## AND r2.CodeNum = 01202 
-)";
+             */
 
 
             DataTable raw = ReportsComplex.GetTable(command);
@@ -56,17 +77,31 @@ WHERE r.AptDateTime = (
             {
                 row = table.NewRow();
                 pat = new Patient();
+                // pat.PatNum = (long)raw.Rows[i]["PatNum"];
                 pat.LName = raw.Rows[i]["LName"].ToString();
                 pat.FName = raw.Rows[i]["FName"].ToString();
                 pat.MiddleI = raw.Rows[i]["MiddleI"].ToString();
-                pat.Preferred = raw.Rows[i]["Preferred"].ToString();
+                // pat.Preferred = raw.Rows[i]["Preferred"].ToString();
                 row["Name"] = pat.GetNameLF();
-                row["Primary Provider"] = Providers.GetAbbr(PIn.Long(raw.Rows[i]["PriProv"].ToString()));
-                row["Sex"] = raw.Rows[i]["Gender"].ToString();
-                row["Postal Code"] = raw.Rows[i]["Zip"].ToString();
-                row["Date of Service"] = raw.Rows[i]["AptDateTime"].ToString().Substring(0, 10);
-                row["Appointment Description"] = raw.Rows[i]["ProcDescript"].ToString();
-                row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString()); 
+                pat.HmPhone = raw.Rows[i]["HmPhone"].ToString();
+                pat.WkPhone = raw.Rows[i]["WkPhone"].ToString();
+                pat.WirelessPhone  = raw.Rows[i]["WirelessPhone"].ToString();
+                pat.Email = raw.Rows[i]["Email"].ToString();
+
+                row["Home Phone"] = raw.Rows[i]["HmPhone"].ToString();
+                row["Work Phone"] = raw.Rows[i]["WkPhone"].ToString();
+                row["Wireless Phone"] = raw.Rows[i]["WirelessPhone"].ToString();
+                row["Email"] = raw.Rows[i]["Email"].ToString();
+
+                row["Procedure Code"] = raw.Rows[i]["ProcCode"].ToString();
+                row["Description"] = raw.Rows[i]["Descript"].ToString();
+
+                // row["Primary Provider"] = Providers.GetAbbr(PIn.Long(raw.Rows[i]["PriProv"].ToString()));
+                // row["Sex"] = raw.Rows[i]["Gender"].ToString();
+                // row["Postal Code"] = raw.Rows[i]["Zip"].ToString();
+                // row["Date of Service"] = raw.Rows[i]["AptDateTime"].ToString().Substring(0, 10);
+                // row["Appointment Description"] = raw.Rows[i]["ProcDescript"].ToString();
+                // row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString()); 
                 table.Rows.Add(row);
             }
             return table;
