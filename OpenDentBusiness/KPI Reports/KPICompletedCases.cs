@@ -13,11 +13,16 @@ namespace OpenDentBusiness {
 			}
 			DataTable table=new DataTable();
 			table.Columns.Add("Name");
-			table.Columns.Add("Sex");
-			table.Columns.Add("Age");
-			table.Columns.Add("Postal Code");
+		//	table.Columns.Add("Sex");
+		//	table.Columns.Add("Age");
+		//	table.Columns.Add("Postal Code");
 			table.Columns.Add("Date of Service");
-            table.Columns.Add("Primary Provider");
+        //  table.Columns.Add("Primary Provider");
+
+            table.Columns.Add("Procedure Code");  
+            table.Columns.Add("Description");  
+            table.Columns.Add("Fee");   
+
             DataRow row;
             /*
             Completed cases
@@ -26,15 +31,30 @@ namespace OpenDentBusiness {
             */
 
             string command = @"
-				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, p.Preferred, r.ProcDate, p.Birthdate  
-				FROM patient p 
-				JOIN procedurelog r ON r.PatNum = p.PatNum 
-				WHERE r.ProcDate = (SELECT MAX(r2.ProcDate) 
-                FROM procedurelog r2
-                WHERE r.PatNum = r2.PatNum 
-                ##AND r2.CodeNum = 01202 
-                AND r2.ProcStatus = 2 
-                AND r2.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
+				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, pl.ProcDate, pl.ProcNum, pc.ProcCode, 
+                        pc.Descript, ptp.FeeAmt
+                FROM treatplan tp
+                JOIN proctp ptp ON tp.TreatPlanNum = ptp.TreatPlanNum
+                JOIN procedurelog pl ON pl.ProcNum = ptp.ProcNumOrig
+                JOIN procedurecode pc ON pc.CodeNum = pl.CodeNum
+                JOIN patient p ON p.PatNum = tp.PatNum
+                WHERE tp.TPStatus = 0
+                AND (tp.Signature IS NOT NULL AND tp.Signature != '')
+                AND pl.ProcStatus = 2
+                AND (pl.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
+
+            /*
+                SELECT pl.ProcNum, pc.ProcCode, pc.Descript, ptp.FeeAmt
+                FROM opendental.treatplan tp
+                JOIN opendental.proctp ptp ON tp.TreatPlanNum = ptp.TreatPlanNum
+                JOIN opendental.procedurelog pl ON pl.ProcNum = ptp.ProcNumOrig
+                JOIN opendental.procedurecode pc ON pc.CodeNum = pl.CodeNum
+                WHERE tp.TPStatus = 0
+                AND (tp.Signature IS NOT NULL AND tp.Signature != '')
+                AND tp.PatNum = 53
+                AND pl.ProcStatus = 2
+                AND pl.ProcDate BETWEEN '2015-03-22' AND '2018-03-22' 
+            */
 
 
             DataTable raw =ReportsComplex.GetTable(command);
@@ -47,13 +67,18 @@ namespace OpenDentBusiness {
 				pat.LName=raw.Rows[i]["LName"].ToString();
 				pat.FName=raw.Rows[i]["FName"].ToString();
 				pat.MiddleI=raw.Rows[i]["MiddleI"].ToString();
-				pat.Preferred=raw.Rows[i]["Preferred"].ToString();
+	//			pat.Preferred=raw.Rows[i]["Preferred"].ToString();
 				row["Name"]=pat.GetNameLF();
-				row["Primary Provider"]=Providers.GetAbbr(PIn.Long(raw.Rows[i]["PriProv"].ToString()));
-                row["Sex"] = raw.Rows[i]["Gender"].ToString();
-				row["Postal Code"]=raw.Rows[i]["Zip"].ToString();
+		//		row["Primary Provider"]=Providers.GetAbbr(PIn.Long(raw.Rows[i]["PriProv"].ToString()));
+        //        row["Sex"] = raw.Rows[i]["Gender"].ToString();
+		//		row["Postal Code"]=raw.Rows[i]["Zip"].ToString();
                 row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
-                row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
+                //        row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
+
+                row["Procedure Code"] = raw.Rows[i]["ProcCode"].ToString();
+                row["Description"] = raw.Rows[i]["Descript"].ToString();
+                row["Fee"] = raw.Rows[i]["FeeAmt"].ToString();
+
                 table.Rows.Add(row);
                 
             }

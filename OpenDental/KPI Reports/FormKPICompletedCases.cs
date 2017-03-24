@@ -35,12 +35,17 @@ namespace OpenDental.KPI_Reports
             QueryObject query;
             query = report.AddQuery(tablePats, "", "", SplitByKind.None, 0);
             query.AddColumn("Name", 150, FieldValueType.String);
-            query.AddColumn("Birthdate", 80, FieldValueType.String);
-            query.AddColumn("Sex", 150, FieldValueType.String);
-            query.AddColumn("Postal Code", 90, FieldValueType.String);
+
             query.AddColumn("Date of Service", 100, FieldValueType.String);
-            query.AddColumn("Primary Provider", 40, FieldValueType.String);
-            query.AddGroupSummaryField("Patient Count:", "Name", "Provider", SummaryOperation.Count);
+            query.AddColumn("Procedure Code", 80, FieldValueType.String);
+            query.AddColumn("Description", 280, FieldValueType.String);
+            query.AddColumn("Fee", 50, FieldValueType.String);
+            //        query.AddColumn("Birthdate", 80, FieldValueType.String);
+            //        query.AddColumn("Sex", 150, FieldValueType.String);
+            //        query.AddColumn("Postal Code", 90, FieldValueType.String);
+            //        query.AddColumn("Date of Service", 100, FieldValueType.String);
+            //        query.AddColumn("Primary Provider", 40, FieldValueType.String);
+            //        query.AddGroupSummaryField("Number of Completed Cases:", "Name", "Provider", SummaryOperation.Count);
             report.AddPageNum();
             if (!report.SubmitQueries())
             {
