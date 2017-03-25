@@ -21,7 +21,7 @@ namespace OpenDentBusiness {
             table.Columns.Add("Wireless Phone");
             table.Columns.Add("Email");
             table.Columns.Add("Procedure Code");
-            table.Columns.Add("Description");
+            table.Columns.Add("Treatment Planned");
 
 
             DataRow row;
@@ -42,15 +42,26 @@ namespace OpenDentBusiness {
             string command = @"
 				SELECT p.PatNum, p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, 
            p.HmPhone, p.WkPhone, p.WirelessPhone, p.Email, pc.Descript, pc.ProcCode 
+FROM procedurelog pl
+JOIN procedurecode pc ON pl.CodeNum = pc.CodeNum
+JOIN appointment a ON a.AptNum = pl.PlannedAptNum
+JOIN patient p ON a.PatNum = p.PatNum
+WHERE pl.AptNum = 0
+AND a.AptStatus = 6
+AND pc.ProcCode != 01202
+";
+
+
+            /*
+				SELECT p.PatNum, p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, 
+           p.HmPhone, p.WkPhone, p.WirelessPhone, p.Email, pc.Descript, pc.ProcCode 
 FROM plannedappt pla
 JOIN appointment a ON a.AptNum = pla.AptNum
 JOIN patient p ON a.PatNum = p.PatNum
 JOIN procedurelog pl ON pl.PlannedAptNum = pla.AptNum
 JOIN procedurecode pc ON pc.CodeNum = pl.CodeNum
-WHERE pc.ProcCode != 01202
-";
-
-            /*
+WHERE pc.ProcCode != 01202              
+             
              FROM opendental.plannedappt pla
 JOIN opendental.appointment a ON a.AptNum = pla.AptNum
 JOIN opendental.patient p ON a.PatNum = p.PatNum 
@@ -94,7 +105,7 @@ WHERE r.AptDateTime = (
                 row["Email"] = raw.Rows[i]["Email"].ToString();
 
                 row["Procedure Code"] = raw.Rows[i]["ProcCode"].ToString();
-                row["Description"] = raw.Rows[i]["Descript"].ToString();
+                row["Treatment Planned"] = raw.Rows[i]["Descript"].ToString();
 
                 // row["Primary Provider"] = Providers.GetAbbr(PIn.Long(raw.Rows[i]["PriProv"].ToString()));
                 // row["Sex"] = raw.Rows[i]["Gender"].ToString();

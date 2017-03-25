@@ -20,8 +20,8 @@ namespace OpenDentBusiness {
         //  table.Columns.Add("Primary Provider");
 
             table.Columns.Add("Procedure Code");  
-            table.Columns.Add("Description");  
-            table.Columns.Add("Fee");   
+            table.Columns.Add("Treatment Completed");  
+            table.Columns.Add("Billed");   
 
             DataRow row;
             /*
@@ -32,6 +32,17 @@ namespace OpenDentBusiness {
 
             string command = @"
 				SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, pl.ProcDate, pl.ProcNum, pc.ProcCode, 
+                        pc.Descript, pl.ProcFee
+                FROM procedurelog pl
+                JOIN appointment a ON pl.PlannedAptNum = a.AptNum
+                JOIN procedurecode pc ON pc.CodeNum = pl.CodeNum
+                JOIN patient p ON p.PatNum = pl.PatNum
+                WHERE a.AptStatus = 6
+                AND pl.ProcStatus = 2
+                AND (pl.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
+
+            /*
+             	SELECT p.LName, p.FName, p.MiddleI, p.Gender, p.Zip, p.PriProv, pl.ProcDate, pl.ProcNum, pc.ProcCode, 
                         pc.Descript, ptp.FeeAmt
                 FROM treatplan tp
                 JOIN proctp ptp ON tp.TreatPlanNum = ptp.TreatPlanNum
@@ -40,10 +51,8 @@ namespace OpenDentBusiness {
                 JOIN patient p ON p.PatNum = tp.PatNum
                 WHERE tp.TPStatus = 0
                 AND (tp.Signature IS NOT NULL AND tp.Signature != '')
-                AND pl.ProcStatus = 2
-                AND (pl.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")";
-
-            /*
+                AND pl.ProcStatus = 2 
+             
                 SELECT pl.ProcNum, pc.ProcCode, pc.Descript, ptp.FeeAmt
                 FROM opendental.treatplan tp
                 JOIN opendental.proctp ptp ON tp.TreatPlanNum = ptp.TreatPlanNum
@@ -76,8 +85,8 @@ namespace OpenDentBusiness {
                 //        row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
 
                 row["Procedure Code"] = raw.Rows[i]["ProcCode"].ToString();
-                row["Description"] = raw.Rows[i]["Descript"].ToString();
-                row["Fee"] = raw.Rows[i]["FeeAmt"].ToString();
+                row["Treatment Completed"] = raw.Rows[i]["Descript"].ToString();
+                row["Billed"] = raw.Rows[i]["ProcFee"].ToString();
 
                 table.Rows.Add(row);
                 

@@ -28,7 +28,11 @@ namespace OpenDental.KPI_Reports
         {
             DataTable tablePats = KPIPendingTreatments.GetPendingTreatments(dateStart.SelectionStart, dateEnd.SelectionStart);
 
+           
+
             ReportComplex report = new ReportComplex(true, false);
+            
+
             report.ReportName = Lan.g(this, "Pending Treatments");
             report.AddTitle("Title", Lan.g(this, "Pending Treatments"));
             // report.AddSubTitle("Date", dateStart.SelectionStart.ToShortDateString() + " - " + dateEnd.SelectionStart.ToShortDateString());
@@ -41,8 +45,8 @@ namespace OpenDental.KPI_Reports
             query.AddColumn("Wireless Phone", 70, FieldValueType.String);
             query.AddColumn("Email", 100, FieldValueType.String);
 
-            query.AddColumn("Procedure Code", 40, FieldValueType.String);
-            query.AddColumn("Description", 250, FieldValueType.String);
+            query.AddColumn("Procedure Code", 80, FieldValueType.String);
+            query.AddColumn("Treatment Planned", 280, FieldValueType.String);
 
             // query.AddColumn("Birthdate", 80, FieldValueType.String);
             // query.AddColumn("Sex", 150, FieldValueType.String);

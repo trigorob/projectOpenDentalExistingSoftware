@@ -38,8 +38,8 @@ namespace OpenDental.KPI_Reports
 
             query.AddColumn("Date of Service", 100, FieldValueType.String);
             query.AddColumn("Procedure Code", 80, FieldValueType.String);
-            query.AddColumn("Description", 280, FieldValueType.String);
-            query.AddColumn("Fee", 50, FieldValueType.String);
+            query.AddColumn("Treatment Completed", 280, FieldValueType.String);
+            query.AddColumn("Billed", 50, FieldValueType.String);
             //        query.AddColumn("Birthdate", 80, FieldValueType.String);
             //        query.AddColumn("Sex", 150, FieldValueType.String);
             //        query.AddColumn("Postal Code", 90, FieldValueType.String);
