@@ -41,11 +41,12 @@ namespace OpenDental.KPI_Reports
                 JOIN opendental.procedurecode pc ON pc.CodeNum = pl.CodeNum
                 JOIN opendental.patient p ON p.PatNum = pl.PatNum
                 WHERE a.AptStatus = 6
-                AND pl.ProcStatus = 2
+                AND pl.ProcStatus = 2            
             ";
 
 
-            tablePats = StretchKPICustomForm.GetPatients(dateStart.SelectionStart, dateEnd.SelectionStart, patQuery);
+           // tablePats = StretchKPICustomForm.GetPatients(dateStart.SelectionStart, dateEnd.SelectionStart, patQuery);
+            tablePats = KPICompletedCases.GetCompletedCasesPats(dateStart.SelectionStart, dateEnd.SelectionStart);
             for (int i = 0; i < tablePats.Rows.Count; i++)
             {
                 DataTable onePat = new DataTable();
