@@ -19,7 +19,7 @@ namespace OpenDentBusiness {
 			table.Columns.Add("Date of Service");
         //  table.Columns.Add("Primary Provider");
 
-            table.Columns.Add("Procedure Code");  
+            table.Columns.Add("Treatment Code");  
             table.Columns.Add("Treatment Completed");  
             table.Columns.Add("Billed");   
 
@@ -66,7 +66,7 @@ namespace OpenDentBusiness {
             */
 
 
-            DataTable raw =ReportsComplex.GetTable(command);
+            DataTable raw = ReportsComplex.GetTable(command);
 			Patient pat;
            
 			for(int i=0;i<raw.Rows.Count;i++) {
@@ -84,7 +84,7 @@ namespace OpenDentBusiness {
                 row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
                 //        row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
 
-                row["Procedure Code"] = raw.Rows[i]["ProcCode"].ToString();
+                row["Treatment Code"] = raw.Rows[i]["ProcCode"].ToString();
                 row["Treatment Completed"] = raw.Rows[i]["Descript"].ToString();
                 row["Billed"] = raw.Rows[i]["ProcFee"].ToString();
 
@@ -93,6 +93,52 @@ namespace OpenDentBusiness {
             }
             return table;
 		}
+
+
+        public static DataTable GetCompletedCasesPerPat(DateTime dateStart, DateTime dateEnd, String patNum)
+        {
+            if (RemotingClient.RemotingRole == RemotingRole.ClientWeb)
+            {
+                return Meth.GetTable(MethodBase.GetCurrentMethod(), dateStart, dateEnd);
+            }
+            DataTable table = new DataTable();
+            table.Columns.Add("Date of Service");
+            table.Columns.Add("Treatment Code");
+            table.Columns.Add("Treatment Completed");
+            table.Columns.Add("Billed");
+
+            DataRow row;
+
+            string command = @"
+				SELECT  pc.ProcCode, pl.ProcDate,
+                        pc.Descript, pl.ProcFee
+                FROM procedurelog pl
+                JOIN appointment a ON pl.PlannedAptNum = a.AptNum
+                JOIN procedurecode pc ON pc.CodeNum = pl.CodeNum
+                JOIN patient p ON p.PatNum = pl.PatNum
+                WHERE a.AptStatus = 6
+                AND pl.ProcStatus = 2
+                AND (pl.ProcDate BETWEEN " + POut.DateT(dateStart) + @" AND " + POut.DateT(dateEnd) + @")
+                AND p.PatNum = '" + patNum + @"'
+                ";
+
+            DataTable raw = ReportsComplex.GetTable(command);
+            Patient pat;
+
+            for (int i = 0; i < raw.Rows.Count; i++)
+            {
+
+                row = table.NewRow();
+                row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
+                row["Treatment Code"] = raw.Rows[i]["ProcCode"].ToString();
+                row["Treatment Completed"] = raw.Rows[i]["Descript"].ToString();
+                row["Billed"] = raw.Rows[i]["ProcFee"].ToString();
+
+                table.Rows.Add(row);
+
+            }
+            return table;
+        }
 
         private static string genderFormat(string gNum)
         {

@@ -776,6 +776,7 @@
     <Compile Include="KPI Reports\KPICompletedCases.cs" />
     <Compile Include="KPI Reports\KPIPendingTreatments.cs" />
     <Compile Include="KPI Reports\KPIRecallBacklog.cs" />
+    <Compile Include="KPI Reports\StretchKPICustomForm.cs" />
     <Compile Include="Misc\ConvertDatabases3.cs" />
     <Compile Include="Misc\ConvertDatabases4.cs" />
     <Compile Include="Misc\EhrCCD.cs" />
