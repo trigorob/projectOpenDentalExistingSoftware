@@ -108,7 +108,7 @@ namespace OpenDentBusiness {
             table.Columns.Add("Name");
             table.Columns.Add("Home Phone");
             table.Columns.Add("Work Phone");
-            table.Columns.Add("Wireless Phone");
+            table.Columns.Add("Cell Phone");
             table.Columns.Add("Email");
             // table.Columns.Add("Procedure Code");
             // table.Columns.Add("Treatment Planned");
@@ -146,7 +146,7 @@ namespace OpenDentBusiness {
                 row["PatNum"] = raw.Rows[i]["PatNum"].ToString();
                 row["Home Phone"] = raw.Rows[i]["HmPhone"].ToString();
                 row["Work Phone"] = raw.Rows[i]["WkPhone"].ToString();
-                row["Wireless Phone"] = raw.Rows[i]["WirelessPhone"].ToString();
+                row["Cell Phone"] = raw.Rows[i]["WirelessPhone"].ToString();
                 row["Email"] = raw.Rows[i]["Email"].ToString();
 
                 table.Rows.Add(row);
@@ -194,7 +194,9 @@ namespace OpenDentBusiness {
                 row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
                 row["Treatment Code"] = raw.Rows[i]["ProcCode"].ToString();
                 row["Treatment Completed"] = raw.Rows[i]["Descript"].ToString();
-                row["Billed"] = raw.Rows[i]["ProcFee"].ToString();
+                // row["Billed"] = raw.Rows[i]["ProcFee"].ToString();
+                double a = (double)raw.Rows[i]["ProcFee"];
+                row["Billed"] = a;
 
                 table.Rows.Add(row);
 

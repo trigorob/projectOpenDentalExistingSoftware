@@ -142,7 +142,7 @@ WHERE r.AptDateTime = (
             table.Columns.Add("PatNum");
             table.Columns.Add("Name");
             table.Columns.Add("Home Phone");
-            table.Columns.Add("Work Phone");
+            table.Columns.Add("Cell Phone");
             table.Columns.Add("Wireless Phone");
             table.Columns.Add("Email");
             // table.Columns.Add("Procedure Code");
@@ -181,7 +181,7 @@ WHERE r.AptDateTime = (
                 row["PatNum"] = raw.Rows[i]["PatNum"];
                 row["Home Phone"] = raw.Rows[i]["HmPhone"].ToString();
                 row["Work Phone"] = raw.Rows[i]["WkPhone"].ToString();
-                row["Wireless Phone"] = raw.Rows[i]["WirelessPhone"].ToString();
+                row["Cell Phone"] = raw.Rows[i]["WirelessPhone"].ToString();
                 row["Email"] = raw.Rows[i]["Email"].ToString();
 
                 table.Rows.Add(row);
