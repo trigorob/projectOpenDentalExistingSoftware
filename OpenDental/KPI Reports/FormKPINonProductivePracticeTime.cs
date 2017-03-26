@@ -27,7 +27,7 @@ namespace OpenDental
 
         private void but_OK_Click(object sender, EventArgs e)
         {
-            DataTable tableProvs = NonProductivePracticeTime.GetNonProductivePracticeTime(dateStart.SelectionStart, dateEnd.SelectionStart);
+            DataTable tableProvs = KPINonProductivePracticeTime.GetNonProductivePracticeTime(dateStart.SelectionStart, dateEnd.SelectionStart);
 
             ReportComplex report = new ReportComplex(true, false);
             report.ReportName = Lan.g(this, "Total Non-Productive Practice Time");

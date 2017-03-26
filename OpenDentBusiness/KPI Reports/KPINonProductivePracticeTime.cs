@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace OpenDentBusiness
 {
-    public class NonProductivePracticeTime
+    public class KPINonProductivePracticeTime
     {
 
         ///<summary> dateStart and dateEnd can be MinVal/MaxVal to indicate "forever".</summary>
