@@ -74,7 +74,7 @@ namespace OpenDental.KPI_Reports
                 query.AddColumn("Name", 150, FieldValueType.String);
                 query.AddColumn("Home Phone", 80, FieldValueType.String);
                 query.AddColumn("Work Phone", 80, FieldValueType.String);
-                query.AddColumn("Wireless Phone", 80, FieldValueType.String);
+                query.AddColumn("Cell Phone", 80, FieldValueType.String);
                 query.AddColumn("Email", 160, FieldValueType.String);
 
 

@@ -64,7 +64,7 @@ namespace OpenDental.KPI_Reports
                 query.AddColumn("Name", 150, FieldValueType.String);
                 query.AddColumn("Home Phone", 80, FieldValueType.String);
                 query.AddColumn("Work Phone", 80, FieldValueType.String);
-                query.AddColumn("Wireless Phone", 80, FieldValueType.String);
+                query.AddColumn("Cell Phone", 80, FieldValueType.String);
                 query.AddColumn("Email", 160, FieldValueType.String);
 
                 String iPatNum = iPat["PatNum"].ToString();
@@ -76,33 +76,42 @@ namespace OpenDental.KPI_Reports
                 procsQ.AddColumn("Date of Service", 100, FieldValueType.String);
                 procsQ.AddColumn("Treatment Code", 80, FieldValueType.String);
                 procsQ.AddColumn("Treatment Completed", 280, FieldValueType.String);
-                procsQ.AddColumn("Billed", 50, FieldValueType.String);
-                }
+                procsQ.AddColumn("Billed", 50, FieldValueType.Number);
 
-                /*
-                // OLDER FORM:
-                DataTable tablePats = KPICompletedCases.GetCompletedCases(dateStart.SelectionStart, dateEnd.SelectionStart);
-                ReportComplex report = new ReportComplex(true, false);            
-                report.ReportName = Lan.g(this, "Completed Cases");
-                report.AddTitle("Title", Lan.g(this, "Completed Cases"));
-                report.AddSubTitle("Date", dateStart.SelectionStart.ToShortDateString() + " - " + dateEnd.SelectionStart.ToShortDateString());
-                QueryObject query;
-                query = report.AddQuery(tablePats, "", "", SplitByKind.None, 0);
-                query.AddColumn("Name", 150, FieldValueType.String);
+            //    procsQ.AddGroupSummaryField("Number of Completed Cases for "+ iPat["Name"] + ":", "Date of Service", 
+            //        "Treatment Code", SummaryOperation.Count);
+            //    procsQ.AddGroupSummaryField("TOTAL:", "Billed", "Billed", SummaryOperation.Count);
 
-                query.AddColumn("Date of Service", 100, FieldValueType.String);
-                query.AddColumn("Treatment Code", 80, FieldValueType.String);
-                query.AddColumn("Treatment Completed", 280, FieldValueType.String);
-                query.AddColumn("Billed", 50, FieldValueType.String);
-                //        query.AddColumn("Birthdate", 80, FieldValueType.String);
-                //        query.AddColumn("Sex", 150, FieldValueType.String);
-                //        query.AddColumn("Postal Code", 90, FieldValueType.String);
-                //        query.AddColumn("Date of Service", 100, FieldValueType.String);
-                //        query.AddColumn("Primary Provider", 40, FieldValueType.String);
-                //        query.AddGroupSummaryField("Number of Completed Cases:", "Name", "Provider", SummaryOperation.Count);
 
-                */
-                report.AddPageNum();
+                report.AddLine("line", AreaSectionType.GroupFooter, Color.AliceBlue, 20,
+                    LineOrientation.Horizontal, LinePosition.Center, 25, 0, 0);
+
+            }
+
+            /*
+            // OLDER FORM:
+            DataTable tablePats = KPICompletedCases.GetCompletedCases(dateStart.SelectionStart, dateEnd.SelectionStart);
+            ReportComplex report = new ReportComplex(true, false);            
+            report.ReportName = Lan.g(this, "Completed Cases");
+            report.AddTitle("Title", Lan.g(this, "Completed Cases"));
+            report.AddSubTitle("Date", dateStart.SelectionStart.ToShortDateString() + " - " + dateEnd.SelectionStart.ToShortDateString());
+            QueryObject query;
+            query = report.AddQuery(tablePats, "", "", SplitByKind.None, 0);
+            query.AddColumn("Name", 150, FieldValueType.String);
+
+            query.AddColumn("Date of Service", 100, FieldValueType.String);
+            query.AddColumn("Treatment Code", 80, FieldValueType.String);
+            query.AddColumn("Treatment Completed", 280, FieldValueType.String);
+            query.AddColumn("Billed", 50, FieldValueType.String);
+            //        query.AddColumn("Birthdate", 80, FieldValueType.String);
+            //        query.AddColumn("Sex", 150, FieldValueType.String);
+            //        query.AddColumn("Postal Code", 90, FieldValueType.String);
+            //        query.AddColumn("Date of Service", 100, FieldValueType.String);
+            //        query.AddColumn("Primary Provider", 40, FieldValueType.String);
+            //        query.AddGroupSummaryField("Number of Completed Cases:", "Name", "Provider", SummaryOperation.Count);
+
+            */
+            report.AddPageNum();
             if (!report.SubmitQueries())
             {
                 return;
