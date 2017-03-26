@@ -65,7 +65,7 @@ namespace OpenDental.KPI_Reports
                 query.AddColumn("Home Phone", 80, FieldValueType.String);
                 query.AddColumn("Work Phone", 80, FieldValueType.String);
                 query.AddColumn("Cell Phone", 80, FieldValueType.String);
-                query.AddColumn("Email", 160, FieldValueType.String);
+                query.AddColumn("Email", 150, FieldValueType.String);
 
                 String iPatNum = iPat["PatNum"].ToString();
 
@@ -74,8 +74,8 @@ namespace OpenDental.KPI_Reports
 
                 QueryObject procsQ = report.AddQuery(procsForPat, "", "", SplitByKind.None, 0);
                 procsQ.AddColumn("Date of Service", 100, FieldValueType.String);
-                procsQ.AddColumn("Treatment Code", 80, FieldValueType.String);
-                procsQ.AddColumn("Treatment Completed", 280, FieldValueType.String);
+                procsQ.AddColumn("Treatment Code", 100, FieldValueType.String);
+                procsQ.AddColumn("Treatment Completed", 350, FieldValueType.String);
                 procsQ.AddColumn("Billed", 50, FieldValueType.Number);
 
             //    procsQ.AddGroupSummaryField("Number of Completed Cases for "+ iPat["Name"] + ":", "Date of Service", 
