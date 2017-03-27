@@ -76,11 +76,13 @@ namespace OpenDentBusiness {
 				pat.LName=raw.Rows[i]["LName"].ToString();
 				pat.FName=raw.Rows[i]["FName"].ToString();
 				pat.MiddleI=raw.Rows[i]["MiddleI"].ToString();
-	//			pat.Preferred=raw.Rows[i]["Preferred"].ToString();
-				row["Name"]=pat.GetNameLF();
-		//		row["Primary Provider"]=Providers.GetAbbr(PIn.Long(raw.Rows[i]["PriProv"].ToString()));
-        //        row["Sex"] = raw.Rows[i]["Gender"].ToString();
-		//		row["Postal Code"]=raw.Rows[i]["Zip"].ToString();
+                //			pat.Preferred=raw.Rows[i]["Preferred"].ToString();
+                // row["Name"]=pat.GetNameLF();
+                row["Name"] = raw.Rows[i]["FName"].ToString() + " " + raw.Rows[i]["MiddleI"].ToString() +
+                 ". " + raw.Rows[i]["LName"].ToString();
+                //		row["Primary Provider"]=Providers.GetAbbr(PIn.Long(raw.Rows[i]["PriProv"].ToString()));
+                //        row["Sex"] = raw.Rows[i]["Gender"].ToString();
+                //		row["Postal Code"]=raw.Rows[i]["Zip"].ToString();
                 row["Date of Service"] = raw.Rows[i]["ProcDate"].ToString().Substring(0, 10);
                 //        row["Age"] = birthdate_to_age(raw.Rows[i]["Birthdate"].ToString());
 
@@ -137,7 +139,8 @@ namespace OpenDentBusiness {
                 pat.LName = raw.Rows[i]["LName"].ToString();
                 pat.FName = raw.Rows[i]["FName"].ToString();
                 pat.MiddleI = raw.Rows[i]["MiddleI"].ToString();
-                row["Name"] = pat.GetNameLF();
+                // row["Name"]=pat.GetNameLF();
+                row["Name"] = raw.Rows[i]["FName"].ToString() + " " + raw.Rows[i]["LName"].ToString();
                 pat.HmPhone = raw.Rows[i]["HmPhone"].ToString();
                 pat.WkPhone = raw.Rows[i]["WkPhone"].ToString();
                 pat.WirelessPhone = raw.Rows[i]["WirelessPhone"].ToString();
