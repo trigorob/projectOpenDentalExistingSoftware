@@ -23,18 +23,18 @@ namespace OpenDental
 
         private void FormKPIDowntime_Load(object sender, EventArgs e)
         {
-            dateStart.SelectionStart = DateTime.Today.AddYears(-1);
-            dateEnd.SelectionStart = DateTime.Today;
+            dateStart.Value = DateTime.Today.AddYears(-1);
+            dateEnd.Value = DateTime.Today;
         }
 
         private void but_OK_Click(object sender, EventArgs e)
         {
-            DataTable tableProvs = KPIDowntime.GetDowntime(dateStart.SelectionStart, dateEnd.SelectionStart);
+            DataTable tableProvs = KPIDowntime.GetDowntime(dateStart.Value, dateEnd.Value);
 
             ReportComplex report = new ReportComplex(true, false);
             report.ReportName = Lan.g(this, "Provider Down-times");
             report.AddTitle("Title", Lan.g(this, "Provider Down-times"));
-            report.AddSubTitle("Date", dateStart.SelectionStart.ToShortDateString() + " - " + dateEnd.SelectionStart.ToShortDateString());
+            report.AddSubTitle("Date", dateStart.Value.ToShortDateString() + " - " + dateEnd.Value.ToShortDateString());
             QueryObject query;
             query = report.AddQuery(tableProvs, "", "", SplitByKind.None, 0);
             query.AddColumn("Provider Name", 150, FieldValueType.String);

@@ -21,18 +21,18 @@ namespace OpenDental
         }
         private void FormKPINonProductivePracticeTime_Load(object sender, EventArgs e)
         {
-            dateStart.SelectionStart = DateTime.Today.AddYears(-1);
-            dateEnd.SelectionStart = DateTime.Today;
+            dateStart.Value = DateTime.Today.AddYears(-1);
+            dateEnd.Value = DateTime.Today;
         }
 
         private void but_OK_Click(object sender, EventArgs e)
         {
-            DataTable tableProvs = KPINonProductivePracticeTime.GetNonProductivePracticeTime(dateStart.SelectionStart, dateEnd.SelectionStart);
+            DataTable tableProvs = KPINonProductivePracticeTime.GetNonProductivePracticeTime(dateStart.Value, dateEnd.Value);
 
             ReportComplex report = new ReportComplex(true, false);
             report.ReportName = Lan.g(this, "Total Non-Productive Practice Time");
             report.AddTitle("Title", Lan.g(this, "Total Non-Productive Practice Time"));
-            report.AddSubTitle("Date", dateStart.SelectionStart.ToShortDateString() + " - " + dateEnd.SelectionStart.ToShortDateString());
+            report.AddSubTitle("Date", dateStart.Value.ToShortDateString() + " - " + dateEnd.Value.ToShortDateString());
             QueryObject query;
             query = report.AddQuery(tableProvs, "", "", SplitByKind.None, 0);
             query.AddColumn("Time (Hours:Min:Seconds)", 200, FieldValueType.String);
