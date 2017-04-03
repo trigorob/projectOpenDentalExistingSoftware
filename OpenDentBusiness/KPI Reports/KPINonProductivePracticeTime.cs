@@ -22,7 +22,6 @@ namespace OpenDentBusiness
             string command = @"
             SELECT  sec_to_time(sum(length(appointment.Pattern))*avg(apptview.RowsPerIncr)*60) AS NonProdTime
 				FROM appointment 
-                LEFT JOIN patient ON (patient.PatNum = appointment.PatNum)
                 CROSS JOIN apptview
                 WHERE EXISTS (	SELECT *
 								FROM procedurelog 

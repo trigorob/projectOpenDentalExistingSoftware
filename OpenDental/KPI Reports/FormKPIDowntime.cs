@@ -37,6 +37,7 @@ namespace OpenDental
             report.AddSubTitle("Date", dateStart.Value.ToShortDateString() + " - " + dateEnd.Value.ToShortDateString());
             QueryObject query;
             query = report.AddQuery(tableProvs, "", "", SplitByKind.None, 0);
+            query.AddColumn("Provider", 90, FieldValueType.String);
             query.AddColumn("Provider Number", 90, FieldValueType.String);
             query.AddColumn("Total Down-time", 100, FieldValueType.String);
             report.AddPageNum();
